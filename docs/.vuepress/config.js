@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-20 14:08:50
- * @LastEditTime: 2020-11-21 10:24:58
+ * @LastEditTime: 2020-11-22 20:31:30
  * @LastEditors: kuangw
  * @Description: In User Settings Edit
  * @FilePath: \my-node\docs\.vuepress\config.js
@@ -11,6 +11,9 @@ const nav = require('./config/nav')
 const sidebar = require('./config/sidebar')
 
 module.exports = {
+  head:[
+    ['link', { rel: 'icon', href: '/icons/favicon.ico' }], // 增加一个自定义的 favicon(网页标签的图标)
+  ],
   title: 'kw的博客网站',
   description: 'kw的博客网站,专注前端技术栈分享',
   themeConfig: {

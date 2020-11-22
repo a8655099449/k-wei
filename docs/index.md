@@ -3,7 +3,7 @@ home: true
 heroImage: /images/logo.png
 heroText: kw的博客网站
 tagline: 年轻人,要讲武德，不要搞，窝里斗🐕
-actionText: go →
+actionText: 开始阅读 →
 actionLink: /home.md
 features:
 - title: 简洁至上
