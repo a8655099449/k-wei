@@ -1,8 +1,8 @@
 ---
 home: true
 heroImage: /images/logo.png
-heroText: kw的博客网站
-tagline: 年轻人,要讲武德，不要搞，窝里斗🐕
+heroText: 地球反三体组织
+tagline: 希望三体人🐀尾汁，耗耗反思，不要搞 ，窝里斗 -- 执剑人·🐎·保国
 actionText: 开始阅读 →
 actionLink: /home.md
 features:
