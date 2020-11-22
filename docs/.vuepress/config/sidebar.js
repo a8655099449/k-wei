@@ -1,10 +1,10 @@
 /*
  * @Author: your name
  * @Date: 2020-11-20 16:23:10
- * @LastEditTime: 2020-11-20 18:00:38
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2020-11-21 11:31:27
+ * @LastEditors: kuangw
  * @Description: In User Settings Edit
- * @FilePath: \new-node\docs\.vuepress\config\sidebar.js
+ * @FilePath: \my-node\docs\.vuepress\config\sidebar.js
  */
 
 
@@ -22,14 +22,10 @@ const sidebarGroup = [{
     title: 'Group 2',
     children: [ /* ... */ ]
   }
-
 ]
 // 为不同的页面区分分组
 const sidebar = {
-  '/css/':'auto',
-  '/js/':sidebarGroup,
   '/':'auto'
-
 }
 /* 
 const sidebar = {

@@ -2,9 +2,9 @@
 home: true
 heroImage: /images/logo.png
 heroText: kw的博客网站
-tagline: 年轻人耗子尾汁
+tagline: 年轻人,要讲武德，不要搞，窝里斗🐕
 actionText: go →
-actionLink: /zh/guide/
+actionLink: /home.md
 features:
 - title: 简洁至上
   details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。

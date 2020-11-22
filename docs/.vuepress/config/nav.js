@@ -1,14 +1,19 @@
 /*
  * @Author: your name
  * @Date: 2020-11-20 15:03:38
- * @LastEditTime: 2020-11-20 17:35:38
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2020-11-22 08:08:32
+ * @LastEditors: kuangw
  * @Description: In User Settings Edit
- * @FilePath: \new-node\docs\.vuepress\config\nav.js
+ * @FilePath: \my-node\docs\.vuepress\config\nav.js
  * 
  */
 
-const jsItems = [{
+const jsItems = [
+  {
+    text: '目录',
+    link: '/js/catelog.md',
+  },
+  {
     text: 'es6',
     link: '/js/es6.md',
   },
@@ -28,44 +33,23 @@ const cssItems = [{
 },
 ]
 
-const elseToolItems = [
+const vscodeItems = [
   {
-    text: '其他工具1',
-    link: '/',
+    text: 'vscode插件推荐',
+    link: '/tool/vscode/plug-recommend',
   },
-  {
-    text: '其他工具2',
-    link: '/',
-  },
-  {
-    text: '其他工具3',
-    link: '/',
-  },
-  {
-    text: '其他工具4',
-    link: '/',
-  },
+
 ]
+
 const toolItems = [{
     text: 'vuepress(博客框架)',
     link: '/tool/vuepress/',
   },
   {
-    text: '工具类目2',
-    link: '/',
+    text: 'vscode',
+    items:vscodeItems
   },
-  {
-    text: '工具类目3',
-    link: '/',
-  },
-  {
-    text: '工具类目4',
-    link: '/',
-  },
-  {
-    text: '其他工具',
-    items:elseToolItems
-  },
+
 ]
 
 const nav = [{

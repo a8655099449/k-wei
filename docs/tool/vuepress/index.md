@@ -10,7 +10,7 @@
 [参考文档](https://coder.itclan.cn/fontend/tools/vuepress-build-blog/)
 :::
 
-## 依赖
+## 前置准备
 
 1. 最新的 node 版本
 2. 有一定的 md 书写经验
@@ -21,7 +21,7 @@
 ```
 # 1. 初始化
 npm init -y
-# 2. 安装vuepress
+# 2. 安装vuepress (全局或者局部选择一个进行安装就可以了)
 # 全局安装
 npm install -g vuepress
 # 局部安装
@@ -29,7 +29,8 @@ npm install  vuepress
 
 ```
 
-> 在 pack.json 内加入以下配置
+> 在 pack.json 内加入以下配置 
+
 
 ```json
 "scripts": {
@@ -37,7 +38,11 @@ npm install  vuepress
   "build": "vuepress build docs"
 }
 ```
-
+::: tip
+上面的配置,可以让我们通过npm快速启动或者打包项目,后面我们可以输入以下指令来触发一些效果
+- `npm run dev` 多用于开发环境，启动一个临时编译的本地环境
+- `npm run bulid` 打包成静态资源，多用于部署在服务器上
+:::
 ## 目录结构初始
 
 1. 新建文件夹`./docs`
@@ -214,7 +219,7 @@ const nav =  [
 - vuepress默认是没有侧边栏的
 - 我们可以通过配置开启侧边栏
 - 侧边栏有自动或手动两种方式
-- 自动侧边栏会查找md文件中的h2和h3标签，最大的深度为2
+- 自动侧边栏会查找md文件中的h2和h3标签，最大的深度为2 默认为1
 
 :::
 
@@ -228,7 +233,7 @@ module.exports = {
 }
 ```
 ::: warning
-如果是这样的话，配置可能就不够灵活
+以上的配置可能就不够灵活
 - 可以在需要自动生成侧边栏的页面加入以下配置，灵活的配置
 ```yaml
 ---
@@ -238,3 +243,124 @@ sidebar: auto
 :::
 
 #### 侧边栏分组
+> 如果自动生成不满足不了需求，我们可以配置可以配置分组
+1. 为所有文件都配置侧边栏分组
+```js
+// .vuepress\config.js
+module.exports = {
+  themeConfig: {
+    sidebar: [
+      {
+        title: 'Group 1',
+        collapsable: false,
+        children: [
+          '/',
+          '/js/',
+          '/js/es6.md',
+          '/css/'
+        ]
+      },
+      {
+        title: 'Group 2',
+        children: [ /* ... */]
+      }
+    ],
+  }
+}
+```
+
+2. 为特定的目录添加分组规则
+::: tip
+这种方式可能才是最为灵活常见的
+:::
+```js
+// .vuepress\config\sidebar.js
+//  先定义一个分组数组
+const sidebarGroup = [{
+    title: 'group 1',
+    collapsable: false,
+    children: [
+      '/',
+      '/js/',
+      '/js/es6.md',
+      '/css/'
+    ]
+  },
+  {
+    title: 'Group 2',
+    children: [ /* ... */ ]
+  }
+]
+const sidebar = {
+  '/js/':sidebarGroup,
+  '/':'auto'
+}
+
+// 以上的规则就是 js使用我们自定义的规则,其他使用自动生成规则
+module.exports = sidebar
+```
+
+
+
+#### 关于侧边栏配置的一些补充
+
+::: tip
+1. 我们上面说过，自动生成侧边栏，默认深度为1(但经我测试深度默认为2),有时候仅匹配h2和h3标签事不够的，这一点可以通过配置来进行修改
+```js
+//.vuepress\config.js
+module.exports = {
+  markdown: {
+    extractHeaders: [ 'h2', 'h3', 'h4','h5','h6' ] // 增加此配置可以为所有标题匹配
+  }
+}
+```   
+
+2. 如果配置的规则不够灵活，我们应该可以选择在某个md文件头部增加配置，来修改
+```yaml
+---
+sidebarDepth: 2   # 标题深度
+navbar: false     # 禁止顶部导航的出现
+sidebar: auto     # 自动设置侧边栏
+sidebar: false    # 禁止侧边栏的出现
+---
+```
+:::
+
+
+### 搜索框的配置
+::: tip
+我们可以看到，顶部导航的位置有个搜索框，一直没有被使用到，下面将介绍如何使用这个搜索框
+
+:::
+
+#### 禁用搜索框
+```js
+// .vuepress\config.js
+module.exports = {
+  themeConfig: {
+    search: false, // 增加此配置以后，你会发现你的搜索框就消失了
+
+  }
+}
+```
+#### Algolia 搜索
+::: tip
+默认的搜索只会为`h1`,`h2`和`h3`标题匹配，实际上已经够使用了，但如果我们需要更加强力的搜索可以使用到`Algolia 搜索`,具体参考文档 [Algolia 搜索]([https://link](https://v0.vuepress.vuejs.org/zh/default-theme-config/#algolia-%E6%90%9C%E7%B4%A2))
+:::
+
+### 其他配置
+
+#### 配置最后更新时间
+
+::: tip
+最后更新时间默认关闭，可以增加以下配置使它打开
+
+```js
+module.exports = {
+  themeConfig: {
+    lastUpdated: '2020年11月21日', // string | boolean
+  }
+}
+```
+:::
+
