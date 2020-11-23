@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2020-11-20 15:03:38
- * @LastEditTime: 2020-11-22 08:08:32
- * @LastEditors: kuangw
+ * @LastEditTime: 2020-11-23 16:34:47
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \my-node\docs\.vuepress\config\nav.js
  * 
@@ -51,7 +51,14 @@ const toolItems = [{
   },
 
 ]
+const miniItems = [
+  {
+    text: '自定义顶部导航',
+    link: '/mini-project/diy-topbar.md',
+  },
 
+
+]
 const nav = [{
     text: 'Home',
     link: '/'
@@ -71,7 +78,7 @@ const nav = [{
   },
   {
     text: '小程序',
-    link: '/mini-project/'
+    items:miniItems
   },
   {
     text: '后端',
