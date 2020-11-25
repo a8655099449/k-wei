@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-20 15:03:38
- * @LastEditTime: 2020-11-23 16:34:47
+ * @LastEditTime: 2020-11-25 10:42:26
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \my-node\docs\.vuepress\config\nav.js
@@ -37,6 +37,14 @@ const vscodeItems = [
   {
     text: 'vscode插件推荐',
     link: '/tool/vscode/plug-recommend',
+  },
+  {
+    text: '如何自定义vscode的代码块',
+    link: '/tool/vscode/diy-code',
+  },
+  {
+    text: '常用代码块',
+    link: '/tool/vscode/code-block',
   },
 
 ]

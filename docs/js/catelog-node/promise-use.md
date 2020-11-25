@@ -9,6 +9,13 @@
 
 ### new promise
 
+
+
+
+
+
+
+
 ```javascript
 # 这里使用一个定时器函数来模仿异步操作
 
