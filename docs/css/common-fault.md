@@ -56,8 +56,10 @@ overflow: hidden;
 filter          : blur(2px);
 ```
 
-## 常用的bs属性
-```
+## 常用的box-shadow属性
+```css
+/* 纸片特效 */
+box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 
 ```
 

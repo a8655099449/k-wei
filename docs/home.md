@@ -1,4 +1,14 @@
+---
+title: 【vue】跨域解决方案之proxyTable
+date: 2017-12-28
+tags:
+- vue
+- webpack
+---
+
 # 首页导航
+## 最近更新
+### [白嫖免费图床,一键传图,PicGo的使用](./tool/picgo.md)
 ## JavaScript
 
 ### [js中的数组方法](./js/arr-function.md)
@@ -30,5 +40,8 @@
 
 ### [我常用的vscode代码片段](./tool/vscode/code-block.md)
 
+### [白嫖免费图床,一键传图,PicGo的使用](./tool/picgo.md)
 ## 综合
 ### [网络协议](./tool/agree.md)
+
+

@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-20 15:03:38
- * @LastEditTime: 2020-11-25 10:42:26
+ * @LastEditTime: 2020-11-26 14:34:41
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \my-node\docs\.vuepress\config\nav.js
@@ -52,6 +52,10 @@ const vscodeItems = [
 const toolItems = [{
     text: 'vuepress(博客框架)',
     link: '/tool/vuepress/',
+  },
+  {
+    text: 'PicGo(图床工具)',
+    link: '/tool/picgo',
   },
   {
     text: 'vscode',
