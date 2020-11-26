@@ -1,12 +1,13 @@
 /*
  * @Author: your name
  * @Date: 2020-11-26 17:36:46
- * @LastEditTime: 2020-11-26 20:50:51
+ * @LastEditTime: 2020-11-26 21:17:59
  * @LastEditors: kuangw
  * @Description: In User Settings Edit
  * @FilePath: \my-node\docs\.vuepress\config\themConfig-reco.js
  */
 const nav = require("./nav")
+const head = require('./head');
 nav.push({ text: '时间线', link: '/timeline/', icon: 'reco-date' })
 const themeConfig = {
   type: 'blog',
@@ -46,30 +47,7 @@ const themeConfig_reco = {
   theme: 'reco',
   themeConfig,
   title: '地球反三体组织',
-  head: [["link", { rel: "icon", href: "/icons/favicon.ico" }], [
-    "script",
-    {
-      src:
-        "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js",
-    },
-  ],
-  [
-    "script",
-    {
-      src:
-        "https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.js",
-    },
-  ],
-  [
-    "link",
-    {
-      rel: "stylesheet",
-      type: "text/css",
-      href:
-        "https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.css",
-    },
-  ],
-  ],
+  head,
 }
 
 module.exports = themeConfig_reco
