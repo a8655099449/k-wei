@@ -1,14 +1,15 @@
 /*
  * @Author: your name
  * @Date: 2020-11-26 17:36:46
- * @LastEditTime: 2020-11-26 18:01:12
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2020-11-26 20:50:51
+ * @LastEditors: kuangw
  * @Description: In User Settings Edit
- * @FilePath: \new-node\docs\.vuepress\config\themConfig-reco.js
+ * @FilePath: \my-node\docs\.vuepress\config\themConfig-reco.js
  */
 const nav = require("./nav")
-nav.push({ text: 'TimeLine', link: '/home', icon: 'reco-date' })
+nav.push({ text: '时间线', link: '/timeline/', icon: 'reco-date' })
 const themeConfig = {
+  type: 'blog',
   nav,
   logo: '/images/logo.png',
   record: 'ICP 备案文案',
@@ -30,14 +31,14 @@ const themeConfig = {
   // 默认为 "Edit this page"
   editLinkText: "提出错误！",
   blogConfig: {
-    category: {
+    /* category: {
       location: 2,     // 在导航栏菜单中所占的位置，默认2
       text: 'Category' // 默认文案 “分类”
     },
     tag: {
       location: 3,     // 在导航栏菜单中所占的位置，默认3
       text: 'Tag'      // 默认文案 “标签”
-    }
+    } */
   }
 }
 

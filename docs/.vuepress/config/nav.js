@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2020-11-20 15:03:38
- * @LastEditTime: 2020-11-26 14:34:41
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2020-11-26 19:56:36
+ * @LastEditors: kuangw
  * @Description: In User Settings Edit
  * @FilePath: \my-node\docs\.vuepress\config\nav.js
  * 
@@ -73,7 +73,8 @@ const miniItems = [
 ]
 const nav = [{
     text: 'Home',
-    link: '/'
+    link: '/',
+    icon: 'iconfont icon-yifu1'
   },
   {
     text: 'javascript',

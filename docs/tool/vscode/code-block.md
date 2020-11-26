@@ -1,3 +1,13 @@
+---
+title: 我常用的VScode代码快
+date: 2020-11-23
+isTimeLine: true
+tags:
+- vscode
+- 工具
+---
+
+
 # vscode 的自定义代码片段
 
 ## mackdown

@@ -1,19 +1,10 @@
 ---
 title: picGo的使用
-date: 2020-11-26
-
-categories:
- - 烹饪
- - 爱好
+date: 2020-11-23
 tags:
- - 烤
- - 鸭子
-
-publish: false
+- mackdown
+- 工具
 ---
-
-# picGo的使用
-
 
 
 ## 为什么要使用PicGo
