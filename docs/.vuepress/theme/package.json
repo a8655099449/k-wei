@@ -1,0 +1,72 @@
+{
+  "_from": "vuepress-theme-reco@1.5.4",
+  "_id": "vuepress-theme-reco@1.5.4",
+  "_inBundle": false,
+  "_integrity": "sha1-7qg7uyYyDgU7DzPQTUJ0+7EVXZc=",
+  "_location": "/vuepress-theme-reco",
+  "_phantomChildren": {
+    "@vssue/api-bitbucket-v2": "1.4.0",
+    "@vssue/api-gitee-v5": "1.4.4",
+    "@vssue/api-github-v3": "1.4.4",
+    "@vssue/api-github-v4": "1.4.0",
+    "@vssue/api-gitlab-v4": "1.4.0",
+    "charenc": "0.0.2",
+    "crypt": "0.0.2",
+    "smoothscroll-polyfill": "0.4.4",
+    "valine": "1.4.14",
+    "vssue": "1.4.6"
+  },
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "vuepress-theme-reco@1.5.4",
+    "name": "vuepress-theme-reco",
+    "escapedName": "vuepress-theme-reco",
+    "rawSpec": "1.5.4",
+    "saveSpec": null,
+    "fetchSpec": "1.5.4"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npm.taobao.org/vuepress-theme-reco/download/vuepress-theme-reco-1.5.4.tgz",
+  "_shasum": "eea83bbb26320e053b0f33d04d4274fbb1155d97",
+  "_spec": "vuepress-theme-reco@1.5.4",
+  "_where": "F:\\mycode\\demo\\yidd_blog-master",
+  "author": {
+    "name": "reco_luan"
+  },
+  "bugs": {
+    "url": "https://github.com/vuepress-reco/vuepress-theme-reco/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@vuepress-reco/vuepress-plugin-back-to-top": "^1.5.4",
+    "@vuepress-reco/vuepress-plugin-comments": "^1.4.6",
+    "@vuepress-reco/vuepress-plugin-loading-page": "^1.4.0",
+    "@vuepress-reco/vuepress-plugin-pagation": "^1.4.7",
+    "@vuepress/plugin-blog": "1.9.2",
+    "@vuepress/plugin-medium-zoom": "1.5.0",
+    "docsearch.js": "2.6.3",
+    "md5": "2.2.1",
+    "vue-click-outside": "1.1.0",
+    "vuepress-plugin-smooth-scroll": "^0.0.9"
+  },
+  "deprecated": false,
+  "description": "A simple and beautiful vuepress Blog & Doc theme.",
+  "gitHead": "3a353ad7b63c4f3673aa5d3d97c682a3d1fd9d81",
+  "homepage": "https://vuepress-theme-reco.recoluan.com",
+  "keywords": [
+    "vuepress",
+    "vue",
+    "theme"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "vuepress-theme-reco",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuepress-reco/vuepress-theme-reco.git"
+  },
+  "version": "1.5.4"
+}
