@@ -1,12 +1,11 @@
 ---
-title: 我常用的VScode代码快
-date: 2020-11-23
-isTimeLine: true
+title: vscode 的自定义代码片段
+date: 2020-11-19
 tags:
-- vscode
-- 工具
+ - 工具
+ - vscode
+categories: tool
 ---
-
 
 # vscode 的自定义代码片段
 

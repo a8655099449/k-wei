@@ -1,11 +1,11 @@
 ---
-title: 自定义vscode代码快
+title: 如何在vscode 中自定义代码块
 date: 2020-11-23
 tags:
-- vscode
-- 工具
+ - vscode
+ - 工具
+categories: tool
 ---
-
 
 # vscode 中自定义代码块
 

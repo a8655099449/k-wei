@@ -2,8 +2,9 @@
 title: vuePress 的使用笔记
 date: 2020-11-20
 tags:
-- vuepress
-- 工具
+ - vuepress
+ - 工具
+categories: tool
 ---
 
 # vuePress 的使用笔记

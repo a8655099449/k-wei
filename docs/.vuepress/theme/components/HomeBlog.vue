@@ -14,41 +14,20 @@
       
       
       </div> -->
+      <!-- 背景视频 -->
       <div class="mask">
-       <bgVideo />
+        <bgVideo />
       </div>
-
-      <ModuleTransition>
-        <img
-          v-if="recoShowModule && $frontmatter.heroImage"
-          :style="heroImageStyle || {}"
-          :src="$withBase($frontmatter.heroImage)"
-          alt="hero"
-        />
-      </ModuleTransition>
-      <ModuleTransition delay="0.04">
-        <h1 v-if="recoShowModule && $frontmatter.heroText !== null">
-          {{ $frontmatter.heroText || $title || "vuePress-theme-reco" }}
-        </h1>
-      </ModuleTransition>
-
+      <a href="#content" class="down-arrows iconfont iconxiala"></a>
       <ModuleTransition delay="0.08">
-        <p
-          v-if="recoShowModule && $frontmatter.tagline !== null"
-          class="description"
-        >
-          {{
-            $frontmatter.tagline ||
-            $description ||
-            "Welcome to your vuePress-theme-reco site"
-          }}
-        </p>
+        <homeText />
       </ModuleTransition>
     </div>
+    <div id="content"></div>
 
     <ModuleTransition delay="0.16">
       <div v-show="recoShowModule" class="home-blog-wrapper">
-        <div class="blog-list">
+        <div class="blog-list" >
           <!-- 博客列表 -->
           <note-abstract
             :data="$recoPosts"
@@ -115,7 +94,8 @@ import ModuleTransition from "@theme/components/ModuleTransition";
 import PersonalInfo from "@theme/components/PersonalInfo";
 import { getOneColor } from "@theme/helpers/other";
 import moduleTransitonMixin from "@theme/mixins/moduleTransiton";
-import bgVideo from './bgVideo'
+import bgVideo from "./bgVideo";
+import homeText from "./homeText";
 export default {
   mixins: [pagination, moduleTransitonMixin],
   components: {
@@ -124,7 +104,8 @@ export default {
     FriendLink,
     ModuleTransition,
     PersonalInfo,
-    bgVideo
+    bgVideo,
+    homeText,
   },
   data() {
     return {
@@ -171,7 +152,6 @@ export default {
     },
   },
   mounted() {
-    console.log("--这是我加入的--");
     this.recoShow = true;
     this._setPage(this._getStoragePage());
   },
@@ -211,6 +191,32 @@ export default {
   // padding: $navbarHeight 0 0;
   padding: 0 0;
   margin: 0px auto;
+
+  .down-arrows {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    bottom: 2rem;
+    font-size: 30px;
+    cursor: pointer;
+    opacity: 0.2;
+    z-index: 10;
+    animation arrowsMov 3s infinite
+    &:hover{
+      animation:none
+    }
+  }
+  @keyframes arrowsMov {
+    0%{
+      bottom: 4rem;
+      opacity: 0.2;
+    }
+    100%{
+      bottom: 0;
+      opacity: 0;
+    }
+  }
 
   .hero {
     position: relative;

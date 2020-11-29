@@ -1,8 +1,8 @@
 ---
 home: true
-heroImage: /images/logo.png
+# heroImage: /images/logo.png
 heroText: null 
-bgImage: 'http://image.woai996.com/picgo/20201127095839.png'
+# bgImage: 'http://image.woai996.com/picgo/20201127095839.png'
 ---
 
 <!-- 

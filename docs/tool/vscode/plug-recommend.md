@@ -1,9 +1,10 @@
 ---
 title: vscode的插件推荐
-date: 2020-11-24
+date: 2020-11-23
 tags:
-- vscode
-- 工具
+ - vscode
+ - 工具
+categories: tool
 ---
 
 # vscode的插件推荐
@@ -19,7 +20,7 @@ tags:
 ### Live Server
 ::: tip
 live server 启动后会在当前的目录运行一个本地服务器，当你的页面更改时，会实时的对页面进行热更新
-- <a data-fancybox title="alt" href="https://raw.githubusercontent.com/ritwickdey/vscode-live-server/master/images/Screenshot/vscode-live-server-explorer-menu-demo-1.gif">![alt](https://raw.githubusercontent.com/ritwickdey/vscode-live-server/master/images/Screenshot/vscode-live-server-explorer-menu-demo-1.gif)</a>
+- ![alt](https://raw.githubusercontent.com/ritwickdey/vscode-live-server/master/images/Screenshot/vscode-live-server-explorer-menu-demo-1.gif)
 :::
 
 ### open in browser
@@ -76,13 +77,13 @@ live server 启动后会在当前的目录运行一个本地服务器，当你�
 ### Auto Rename Tag
 ::: tip
 **`Auto Rename Tag`** 在你更改标签时，会自动的去更改闭合标签的内容
-- <a data-fancybox title="alt" href="https://github.com/formulahendry/vscode-auto-rename-tag/raw/master/images/usage.gif">![alt](https://github.com/formulahendry/vscode-auto-rename-tag/raw/master/images/usage.gif)</a>
+- ![alt](https://github.com/formulahendry/vscode-auto-rename-tag/raw/master/images/usage.gif)
 :::
 
 ### Auto Close Tag
 ::: tip
 **`Auto Close Tag`** 会自动的生成一个闭合标签,在运用于自定义组件时是个不错的选择
-- <a data-fancybox title="alt" href="https://code.visualstudio.com/assets/updates/1_16/auto-close2.gif">![alt](https://code.visualstudio.com/assets/updates/1_16/auto-close2.gif)</a>
+- ![alt](https://code.visualstudio.com/assets/updates/1_16/auto-close2.gif)
 :::
 
 ### JavaScript (ES6) code snippets
@@ -128,7 +129,7 @@ Prettier整合了许多语言的代码格式整理，属于必装插件
 
 ::: tip
 - **`Bracket Pair Colorizer`** 可以让你代码中的括号，非对组的颜色变得不同，让代码变得更有辨识度，某种意义上说也使得代码也变得更加美观优雅
-- <a data-fancybox title="Bracket Pair Colorizer" href="https://github.com/CoenraadS/Bracket-Pair-Colorizer-2/raw/develop/images/consecutiveExample.png">![Bracket Pair Colorizer](https://github.com/CoenraadS/Bracket-Pair-Colorizer-2/raw/develop/images/consecutiveExample.png)</a>
+- ![Bracket Pair Colorizer](https://github.com/CoenraadS/Bracket-Pair-Colorizer-2/raw/develop/images/consecutiveExample.png)
 :::
 
 ### Path Intellisense
@@ -144,7 +145,7 @@ Prettier整合了许多语言的代码格式整理，属于必装插件
 ### koroFileHeader
 ::: tip
 **`koroFileHeader`**会自动在文件的头部生成注释，记录如 **文件生成日期、最后编辑时间、描述**等信息，这个是否使用时看个人的，它本身也支持很多的配置实现更灵活的运用
-- <a data-fancybox title="alt" href="https://raw.githubusercontent.com/OBKoro1/koro1FileHeader/master/images/example.gif">![alt](https://raw.githubusercontent.com/OBKoro1/koro1FileHeader/master/images/example.gif)</a>
+- ![alt](https://raw.githubusercontent.com/OBKoro1/koro1FileHeader/master/images/example.gif)
 :::
 
 
@@ -153,7 +154,7 @@ Prettier整合了许多语言的代码格式整理，属于必装插件
 
 ::: tip
 **`Colorful Comments`** 可以更换你注释的高亮色，让代码可读性变高
-- <a data-fancybox title="alt" href="https://github.com/Parth2031/Colorful-Comments/raw/master/Images/Colorful-Comments.png">![alt](https://github.com/Parth2031/Colorful-Comments/raw/master/Images/Colorful-Comments.png)</a>
+-![alt](https://github.com/Parth2031/Colorful-Comments/raw/master/Images/Colorful-Comments.png)
 
 :::
 
@@ -165,13 +166,13 @@ Prettier整合了许多语言的代码格式整理，属于必装插件
 ::: tip
 这个插件也是我个人认为最值得安装的插件之一，一款编辑器好不好用，很大程度在于它好不好看，一款好看的编辑器，可以让我们写代码时变得更加舒心，这款插件会格局你文件的后缀和文件夹名称，改变文件图标的显示，增强目录的可读性和风格
 
-- <a data-fancybox title="vscode-icons" href="https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/images/screenshot.gif">![vscode-icons](https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/images/screenshot.gif)</a>
+-![vscode-icons](https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/images/screenshot.gif)
 :::
 
 ### GitLens 
 ::: tip
 GitLens 也是vscode中大名鼎鼎的插件，可以查看git中历史的版本
-- <a data-fancybox title="alt" href="https://raw.githubusercontent.com/eamodio/vscode-gitlens/main/images/docs/revision-navigation.gif">![alt](https://raw.githubusercontent.com/eamodio/vscode-gitlens/main/images/docs/revision-navigation.gif)</a>
+- ![alt](https://raw.githubusercontent.com/eamodio/vscode-gitlens/main/images/docs/revision-navigation.gif)
 :::
 
 ### Markdown All in One 和 Markdown Preview Enhanced
@@ -179,7 +180,7 @@ GitLens 也是vscode中大名鼎鼎的插件，可以查看git中历史的版本
 如果你喜欢使用vscode编写markdown文档，那么以上两款插件也是里面的不三选择
 - 第一款可以让vscode编辑器对markdown文档有全方面的支持，包括但不限于内置代码块、快捷键、代码整理，总之装上就对了，好东西我们从不嫌多
 - 第二款可以在编辑器旁边打开一个实时预览的界面
-- <a data-fancybox title="Markdown Preview Enhanced" href="https://user-images.githubusercontent.com/1908863/28199365-bb03a570-682a-11e7-8f65-d7d2b258d583.png">![Markdown Preview Enhanced](https://user-images.githubusercontent.com/1908863/28199365-bb03a570-682a-11e7-8f65-d7d2b258d583.png)</a>
+- ![Markdown Preview Enhanced](https://user-images.githubusercontent.com/1908863/28199365-bb03a570-682a-11e7-8f65-d7d2b258d583.png)
 :::
 
 
@@ -220,6 +221,6 @@ GitLens 也是vscode中大名鼎鼎的插件，可以查看git中历史的版本
 ::: tip
 1. 点击左下角配置图标->选择设置
 2. 在设置界面的右上角会发现一个打开设置的图标，点击后会打开一个`settings.json`的文件。在此文件内，将设置的内容写入即可完成配置，部分插件的设置在写入后需要重启才会生效
-<a data-fancybox title="alt" href="./img/settings.png">![alt](./img/settings.png)</a>   
-3. 设置分为两种 `用户区`代表全局配置，`工作区`则只在当前编辑器打开的目录生效,当你更改工作区的配置后，在项目的根目录就会出现`.vscode`的文件夹保存着你的配置，`工作区`的权级大于用户区`用户区`
+![alt](./img/settings.png)
+1. 设置分为两种 `用户区`代表全局配置，`工作区`则只在当前编辑器打开的目录生效,当你更改工作区的配置后，在项目的根目录就会出现`.vscode`的文件夹保存着你的配置，`工作区`的权级大于用户区`用户区`
 :::

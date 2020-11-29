@@ -1,3 +1,12 @@
+---
+title: 箭头函数详解
+date: 2020-11-16
+tags:
+ - js
+ - 前端
+categories: code
+---
+
 ## es6 的箭头函数
 
 :::tip

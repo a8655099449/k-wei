@@ -1,3 +1,13 @@
+---
+title: promise的使用
+date: 2020-11-03
+tags:
+ - js
+ - 前端
+categories: code
+---
+
+
 ## promise
 
 ### 为什么要使用promise？

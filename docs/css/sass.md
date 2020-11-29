@@ -1,3 +1,13 @@
+---
+title: sass的使用
+date: 2020-11-23
+tags:
+ - css
+ - scss
+categories: code
+---
+
+
 ## sass是什么？
 > sass属于css的一种编译语言
 

@@ -1,3 +1,12 @@
+---
+title: 节流与防抖
+date: 2020-11-23
+tags:
+ - js
+ - 前端
+categories: code
+---
+
 ## 节流函数
 ```javascript
 // 节流函数

@@ -1,3 +1,13 @@
+---
+title: js的严格模式
+date: 2020-11-12
+tags:
+ - js
+ - 前端
+categories: code
+---
+
+
 ## 严格模式
 ### 什么是严格模式
 - JavaScript除了正常模式外，还提供了严格模式。严格模式是具有限制JavaScript变体的一种方式。

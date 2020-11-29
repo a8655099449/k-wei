@@ -1,3 +1,14 @@
+---
+title: 我常用css的常用属性
+date: 2020-11-18
+tags:
+ - css
+ - 经验
+categories: code
+---
+
+
+
 # 我使用css的常用属性
 ## 通用
 ```css

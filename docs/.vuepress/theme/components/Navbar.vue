@@ -88,8 +88,10 @@ export default {
   },
   methods: {
     getRouter(e) {
-      this.isHome = this.$route.fullPath === "/";
-      console.log(this.isHome);
+   
+      let path = this.$route.fullPath.split('#')[0]
+
+      this.isHome = path === "/";
     },
   },
 };

@@ -1,13 +1,18 @@
 <template>
-	<div v-click-outside="hideMenu" class="color-picker" v-if="$themeConfig.modePicker !== false" >
+<!-- 	<div v-click-outside="hideMenu" class="color-picker" v-if="$themeConfig.modePicker !== false" >
+
+
 		<a class="color-button" @click.prevent="showMenu = !showMenu">
-			<i class="iconfont reco-color"></i>
+			<i class="iconfont iconpifu1"></i>
 		</a>
 		<transition name="menu-transition" mode="out-in">
 			<div v-show="showMenu" class="color-picker-menu">
 				<ModePicker />
 			</div>
 		</transition>
+	</div> -->
+	<div>
+		<myColor />
 	</div>
 </template>
 
@@ -15,6 +20,7 @@
 import ClickOutside from 'vue-click-outside'
 import ModePicker from './ModePicker'
 import applyMode from './applyMode'
+import  myColor from './myColor'
 
 export default {
   name: 'UserSettings',
@@ -24,7 +30,8 @@ export default {
   },
 
   components: {
-    ModePicker
+		ModePicker,
+		myColor
   },
 
   data () {
@@ -37,8 +44,10 @@ export default {
   mounted () {
     // modePicker 关闭时默认使用主题设置的模式
     const themeMode = this.$themeConfig.mode || 'auto'
-    const { modePicker } = this.$themeConfig
-    if (modePicker === false) {
+		const { modePicker } = this.$themeConfig
+		// console.log(themeMode,modePicker);
+		
+    /* if (modePicker === false) {
       // 为 'auto' 模式设置监听器
       if (themeMode === 'auto') {
         window.matchMedia('(prefers-color-scheme: dark)').addListener(() => {
@@ -49,7 +58,7 @@ export default {
         })
       }
       applyMode(themeMode)
-    }
+    } */
   },
 
   methods: {
@@ -72,7 +81,7 @@ export default {
 		height: 100%;
 		.iconfont {
 			font-size 1.4rem
-			color: $accentColor
+			// color: $accentColor
 		}
 	}
 

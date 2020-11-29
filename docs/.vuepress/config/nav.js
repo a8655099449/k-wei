@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-20 15:03:38
- * @LastEditTime: 2020-11-26 19:56:36
+ * @LastEditTime: 2020-11-28 18:06:50
  * @LastEditors: kuangw
  * @Description: In User Settings Edit
  * @FilePath: \my-node\docs\.vuepress\config\nav.js
@@ -74,9 +74,9 @@ const miniItems = [
 const nav = [{
     text: 'Home',
     link: '/',
-    icon: 'iconfont icon-yifu1'
+    icon: 'iconfont iconhome'
   },
-  {
+/*   {
     text: 'javascript',
     link: '/js/',
     items: jsItems
@@ -96,7 +96,7 @@ const nav = [{
   {
     text: '后端',
     link: '/server/'
-  },
+  }, */
   {
     text: '工具',
     items: toolItems

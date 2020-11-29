@@ -10,6 +10,7 @@
       >{{ mode.title }}</li>
     </ul>
   </div>
+  <!-- <div>hhha</div> -->
 </template>
 
 <script>
@@ -47,6 +48,8 @@ export default {
 
   methods: {
     selectMode (mode) {
+      console.log(mode);
+      
       if (mode !== this.currentMode) {
         this.currentMode = mode
         applyMode(mode)
