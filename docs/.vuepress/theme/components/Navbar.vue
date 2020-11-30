@@ -153,20 +153,31 @@ $navbar-horizontal-padding = 1.5rem;
       vertical-align: top;
     }
   }
+  .site-name {
+    color: var(--mytext-color);
+  }
+
+  a, span, img {
+    color: var(--mytext-color);
+  }
+
+  .iconfont {
+    color: var(--mytext-color);
+  }
 }
 
 .isHome {
   --background-color: rgba(0, 0, 0, 0);
   .site-name {
-    color: #d6dce5;
+    color: var(--mytext-color);
   }
 
   a, span, img {
-    color: #d6dce5;
+    color: var(--mytext-color);
   }
 
   .iconfont {
-    color: #d6dce5;
+    color: var(--mytext-color);
   }
 }
 

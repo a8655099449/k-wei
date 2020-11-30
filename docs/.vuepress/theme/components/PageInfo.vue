@@ -33,7 +33,6 @@
 <script>
 // 引入时间格式化js文件
 import { formatDate } from '@theme/helpers/utils'
-
 export default {
   props: {
     pageInfo: {
@@ -56,10 +55,12 @@ export default {
       numStyle: {
         fontSize: '.9rem',
         fontWeight: 'normal',
-        color: '#999'
-      }
+        color: '#fff'
+      },
+      brArr
     }
   },
+
   filters: {
     formatDateValue (value) {
       if (!value) return ''
@@ -95,7 +96,7 @@ export default {
 .iconfont
   display inline-block
   line-height 1.5rem
-  
+  color: var(--mytext-color);
   &:not(:last-child)
     margin-right 1rem
   span
@@ -104,6 +105,7 @@ export default {
 
   .tag-item
     font-family Ubuntu, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif
+    cursor: pointer;
     &.active
       color $accentColor
     &:hover
