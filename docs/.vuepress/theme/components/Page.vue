@@ -1,8 +1,9 @@
 <template>
   <main class="page" :style="pageStyle">
-    <ModuleTransition>
-
+    <ModuleTransition style="position:relative">
+      <!--  -->
       <div v-show="recoShowModule && $page.title" class="page-title">
+        <PageBgImg />
         <h1>{{$page.title}}</h1>
 
         <hr>
@@ -87,10 +88,11 @@ import { resolvePage, outboundRE, endingSlashRE } from '@theme/helpers/utils'
 import ModuleTransition from '@theme/components/ModuleTransition'
 import moduleTransitonMixin from '@theme/mixins/moduleTransiton'
 import SubSidebar from '@theme/components/SubSidebar'
+import PageBgImg from '@theme/components/PageBgImg'
 
 export default {
   mixins: [moduleTransitonMixin],
-  components: { PageInfo, ModuleTransition, SubSidebar },
+  components: { PageInfo, ModuleTransition, SubSidebar,PageBgImg },
 
   props: ['sidebarItems'],
 
@@ -246,13 +248,13 @@ function flatten (items, res) {
 
 .page
   position relative
-  padding-top 5rem
-  padding-bottom 2rem
-  padding-right 14rem
+  // padding-top 5rem
+  // padding-bottom 2rem
+  // padding-right 14rem
   display block
   .side-bar
     position fixed
-    top 10rem
+    top 18rem
     bottom 10rem
     right 2rem
     overflow-y scroll
@@ -263,7 +265,11 @@ function flatten (items, res) {
     max-width: $contentWidth;
     margin: 0 auto;
     padding: 1rem 2.5rem;
-    color var(--text-color)
+    // color var(--text-color)
+    color: $myTextColor;
+    // padding 5rem 0
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   .page-edit
     @extend $wrapper
     padding-top 1rem

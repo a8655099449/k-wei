@@ -1,5 +1,5 @@
 ---
-title: s的原型链和继承
+title: js的原型链和继承
 date: 2020-11-03
 tags:
  - js

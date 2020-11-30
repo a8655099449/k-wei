@@ -111,6 +111,7 @@ $navbar-vertical-padding = 0.7rem;
 $navbar-horizontal-padding = 1.5rem;
 
 .navbar {
+  --background-color: rgba(0, 0, 0, 0);
   padding: $navbar-vertical-padding $navbar-horizontal-padding;
   line-height: $navbarHeight - 1.4rem;
   box-shadow: var(--box-shadow);

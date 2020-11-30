@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-26 17:36:46
- * @LastEditTime: 2020-11-27 10:16:25
+ * @LastEditTime: 2020-11-30 17:10:38
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \my-node\docs\.vuepress\config\themConfig-reco.js
@@ -13,7 +13,7 @@ const themeConfig = {
   type: 'blog',
   nav,
   logo: '/images/logo.png',
-  record: 'ICP 备案文案',
+  record: 'ICP 湘ICP备2020022053号',
   recordLink: 'ICP 备案指向链接',
   cyberSecurityRecord: '公安部备案文案',
   cyberSecurityLink: '公安部备案指向链接',
@@ -26,7 +26,11 @@ const themeConfig = {
   repoLabel: 'GitHub',
 
   editLinks: true,
-
+  // valine评论的配置
+  valineConfig: {
+    appId: 'ymHDQk9EUdjIMwSUiMlchlwp-gzGzoHsz',// your appId
+    appKey: 'iENx4PlHyXUYazTVkTofEDP8', // your appKey
+  },
   editLinkText: "提出错误！",
   blogConfig: {
     category: {

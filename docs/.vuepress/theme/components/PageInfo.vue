@@ -95,11 +95,13 @@ export default {
 .iconfont
   display inline-block
   line-height 1.5rem
+  
   &:not(:last-child)
     margin-right 1rem
   span
     margin-left 0.5rem
 .tags
+
   .tag-item
     font-family Ubuntu, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif
     &.active
