@@ -57,7 +57,7 @@ export default {
         fontWeight: 'normal',
         color: '#fff'
       },
-      brArr
+      
     }
   },
 

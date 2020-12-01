@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-11-27 10:06:23
+ * @LastEditTime: 2020-12-01 16:00:13
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \new-node\docs\.vuepress\theme\components\Mode\applyMode.js
+ */
 import modeOptions from './modeOptions'
 
 function render (mode) {

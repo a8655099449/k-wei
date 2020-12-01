@@ -1,6 +1,7 @@
 <template>
   <header :class="{ navbar: true, isHome: this.isHome }">
     <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')" />
+    <div class="pt-bgBar"></div>
 
     <router-link :to="$localePath" class="home-link">
       <img
@@ -78,7 +79,6 @@ export default {
     algolia() {
       return this.$themeLocaleConfig.algolia || this.$themeConfig.algolia || {};
     },
-
     isAlgoliaSearch() {
       return this.algolia && this.algolia.apiKey && this.algolia.indexName;
     },
@@ -87,12 +87,12 @@ export default {
     $route: "getRouter",
   },
   methods: {
+    // 监听路由发生变化
     getRouter(e) {
-   
-      let path = this.$route.fullPath.split('#')[0]
-
+      let path = this.$route.fullPath.split("#")[0];
       this.isHome = path === "/";
     },
+    // 监听滚动条变化，从而改变导航栏的透明度
   },
 };
 
@@ -109,13 +109,23 @@ function css(el, property) {
 
 $navbar-vertical-padding = 0.7rem;
 $navbar-horizontal-padding = 1.5rem;
-
+.pt-bgBar{
+  background: var(--background-color);
+  // background: red;
+  position absolute
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index -1;
+  opacity: 1;
+}
 .navbar {
-  --background-color: rgba(0, 0, 0, 0);
+  // --background-color: rgba(0, 0, 0, 0);
   padding: $navbar-vertical-padding $navbar-horizontal-padding;
   line-height: $navbarHeight - 1.4rem;
   box-shadow: var(--box-shadow);
-  background: var(--background-color);
+  // background: var(--background-color);
 
   a, span, img {
     display: inline-block;
@@ -134,7 +144,7 @@ $navbar-horizontal-padding = 1.5rem;
     font-weight: 600;
     color: var(--text-color);
     position: relative;
-    background: var(--background-color);
+    // background: var(--background-color);
   }
 
   .links {
@@ -146,15 +156,32 @@ $navbar-horizontal-padding = 1.5rem;
     right: $navbar-horizontal-padding;
     top: $navbar-vertical-padding;
     display: flex;
-    background-color: var(--background-color);
+    // background-color: var(--background-color);
 
     .search-box {
       flex: 0 0 auto;
       vertical-align: top;
     }
   }
+
   .site-name {
-    color: var(--mytext-color);
+    color: var(--text-color);
+  }
+
+  a, span, img {
+    color: var(--text-color);
+  }
+
+  .iconfont {
+    color: var(--text-color);
+  }
+}
+
+/* .isHome {
+  // --background-color: rgba(0, 0, 0, 0);
+
+  .site-name {
+    color: var(--text-color);
   }
 
   a, span, img {
@@ -164,22 +191,7 @@ $navbar-horizontal-padding = 1.5rem;
   .iconfont {
     color: var(--mytext-color);
   }
-}
-
-.isHome {
-  --background-color: rgba(0, 0, 0, 0);
-  .site-name {
-    color: var(--mytext-color);
-  }
-
-  a, span, img {
-    color: var(--mytext-color);
-  }
-
-  .iconfont {
-    color: var(--mytext-color);
-  }
-}
+} */
 
 @media (max-width: $MQMobile) {
   .navbar {

@@ -1,7 +1,7 @@
 <!--
  * @Date: 2020-11-28 12:06:33
- * @LastEditors: kuangw
- * @LastEditTime: 2020-11-28 21:39:28
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2020-12-01 16:56:14
  * @FilePath: \my-node\docs\.vuepress\theme\components\Mode\myColor.vue
  * @desc: Do not edit
 -->
@@ -27,7 +27,6 @@ export default {
   mounted() {
     let mode = localStorage.getItem("mode") || "light";
     this.isDrak = mode === "dark";
-    console.log(mode);
     applyMode(mode);
   },
   methods: {

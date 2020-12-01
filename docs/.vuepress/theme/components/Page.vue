@@ -2,7 +2,11 @@
   <main class="page" :style="pageStyle">
     <ModuleTransition style="position: relative">
       <!--  -->
-      <div v-show="recoShowModule && $page.title" class="page-title">
+      <div
+        v-show="recoShowModule && $page.title"
+        class="page-title"
+        ref="pageTitle"
+      >
         <PageBgImg />
         <h1>{{ $page.title }}</h1>
 
@@ -77,7 +81,15 @@ export default {
   components: { PageInfo, ModuleTransition, SubSidebar, PageBgImg },
 
   props: ["sidebarItems"],
-
+  mounted() {
+    console.log("页面加载了");
+    setTimeout(() => {
+      this.pageTitleHeight = this.$refs.pageTitle.clientHeight;
+      this.pTbgBar = document.querySelector(".pt-bgBar");
+      this.pTbgBar.style.opacity = "0";
+    }, 100);
+    window.addEventListener("scroll", this.handleScrollChange);
+  },
   data() {
     return {
       isHasKey: true,
@@ -175,7 +187,7 @@ export default {
       return headers.length > 0 ? {} : { paddingRight: "0" };
     },
   },
-
+  ScrollTimer: -1,
   methods: {
     createEditLink(repo, docsRepo, docsDir, docsBranch, path) {
       const bitbucket = /bitbucket.org/;
@@ -201,6 +213,20 @@ export default {
         (docsDir ? docsDir.replace(endingSlashRE, "") + "/" : "") +
         path
       );
+    },
+    handleScrollChange(e) {
+      clearTimeout(this.ScrollTimer);
+
+      this.ScrollTimer = setTimeout(() => {
+        console.log('触发了');
+        let prop = document.documentElement.scrollTop / this.pageTitleHeight;
+        if (prop < 1) {
+          this.pTbgBar.style.opacity = prop.toFixed(1);
+        }else{
+          this.pTbgBar.style.opacity = '1'
+
+        }
+      }, 100);
     },
   },
 };
