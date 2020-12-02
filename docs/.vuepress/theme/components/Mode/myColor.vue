@@ -1,17 +1,17 @@
 <!--
  * @Date: 2020-11-28 12:06:33
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2020-12-01 16:56:14
+ * @LastEditTime: 2020-12-02 09:59:53
  * @FilePath: \my-node\docs\.vuepress\theme\components\Mode\myColor.vue
  * @desc: Do not edit
 -->
 <template>
   <div :class="{ 'my-color': true, isDrak: isDrak }" @click="changeMode">
     <div class="div1">
-      <img src="/images/mode/drak.png" alt="" />
+      <img src="http://photo.tuituisoft.com/picgo/20201202095920.png" alt="" />
     </div>
     <div class="div2">
-      <img src="/images/mode/light.png" alt="" />
+      <img src="http://photo.tuituisoft.com/picgo/20201202095945.png" alt="" />
     </div>
   </div>
 </template>

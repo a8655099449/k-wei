@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2020-11-27 10:06:23
- * @LastEditTime: 2020-12-01 16:00:13
- * @LastEditors: your name
+ * @LastEditTime: 2020-12-02 11:29:21
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \new-node\docs\.vuepress\theme\components\Mode\applyMode.js
  */

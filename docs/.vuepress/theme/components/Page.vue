@@ -82,12 +82,13 @@ export default {
 
   props: ["sidebarItems"],
   mounted() {
-    console.log("页面加载了");
     setTimeout(() => {
       this.pageTitleHeight = this.$refs.pageTitle.clientHeight;
       this.pTbgBar = document.querySelector(".pt-bgBar");
       this.pTbgBar.style.opacity = "0";
+      document.documentElement.scrollTop = 0;
     }, 100);
+
     window.addEventListener("scroll", this.handleScrollChange);
   },
   data() {
@@ -218,16 +219,19 @@ export default {
       clearTimeout(this.ScrollTimer);
 
       this.ScrollTimer = setTimeout(() => {
-        console.log('触发了');
         let prop = document.documentElement.scrollTop / this.pageTitleHeight;
         if (prop < 1) {
           this.pTbgBar.style.opacity = prop.toFixed(1);
-        }else{
-          this.pTbgBar.style.opacity = '1'
-
+        } else {
+          this.pTbgBar.style.opacity = "1";
         }
       }, 100);
     },
+  },
+  destroyed() {
+    // 删除滚动监听事件，再将navbar的透明值设置回1
+    window.removeEventListener("scroll", this.handleScrollChange);
+    this.pTbgBar.style.opacity = "1";
   },
 };
 
@@ -293,6 +297,10 @@ function flatten(items, res) {
     // padding 5rem 0
     padding-top: 10rem;
     padding-bottom: 10rem;
+
+    .iconfont {
+      color: var(--mytext-color);
+    }
   }
 
   .page-edit {

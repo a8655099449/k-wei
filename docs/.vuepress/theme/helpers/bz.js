@@ -1,7 +1,7 @@
 /*
  * @Date: 2020-11-29 20:32:56
- * @LastEditors: kuangw
- * @LastEditTime: 2020-11-30 22:15:46
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2020-12-02 11:29:39
  * @FilePath: \my-node\docs\.vuepress\theme\helpers\bz.js
  * @desc: Do not edit
  */
@@ -49,7 +49,22 @@ const bzarr = [
   "https://w.wallhaven.cc/full/ym/wallhaven-ymz61d.jpg",
   "https://w.wallhaven.cc/full/zm/wallhaven-zmqomo.jpg",
   "https://w.wallhaven.cc/full/pk/wallhaven-pk3jw9.jpg",
-  "http://image.woai996.com/picGo/fsij7cpzdy041.png",
+  'https://w.wallhaven.cc/full/28/wallhaven-28g2d6.jpg',
+  'https://w.wallhaven.cc/full/j3/wallhaven-j39dpw.png',
+  'https://w.wallhaven.cc/full/g7/wallhaven-g7zqje.jpg',
+  'https://w.wallhaven.cc/full/6o/wallhaven-6ojrkw.jpg',
+  'https://w.wallhaven.cc/full/k7/wallhaven-k73re6.jpg',
+  'https://w.wallhaven.cc/full/j3/wallhaven-j385lw.jpg',
+  'https://w.wallhaven.cc/full/m9/wallhaven-m9q6r8.jpg',
+  'https://w.wallhaven.cc/full/e7/wallhaven-e7zrzl.jpg',
+  'https://w.wallhaven.cc/full/g7/wallhaven-g7zl1e.jpg',
+  'https://w.wallhaven.cc/full/v9/wallhaven-v9x3mp.jpg',
+  'https://w.wallhaven.cc/full/dp/wallhaven-dpxqvo.jpg',
+  'https://w.wallhaven.cc/full/57/wallhaven-57ljm8.jpg',
 ];
 
 export default bzarr;
+
+
+
+

@@ -55,7 +55,8 @@ export default {
       numStyle: {
         fontSize: '.9rem',
         fontWeight: 'normal',
-        color: '#fff'
+        // color: 'var(--text-color)'
+        color: '#d6dce5'
       },
       
     }
@@ -96,7 +97,7 @@ export default {
 .iconfont
   display inline-block
   line-height 1.5rem
-  color: var(--mytext-color);
+  color: var(--text-color);
   &:not(:last-child)
     margin-right 1rem
   span

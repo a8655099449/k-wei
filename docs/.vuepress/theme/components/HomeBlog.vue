@@ -15,8 +15,9 @@
       
       </div> -->
       <!-- 背景视频 -->
-      <div class="mask">
-        <bgVideo />
+      <div class="mask" ref="homeWarp">
+        <bgVideo v-if="isBgVideo" />
+        <HomeBgImg v-else />
       </div>
       <a href="#content" class="down-arrows iconfont iconxiala"></a>
       <ModuleTransition delay="0.08">
@@ -27,7 +28,7 @@
 
     <ModuleTransition delay="0.16">
       <div v-show="recoShowModule" class="home-blog-wrapper">
-        <div class="blog-list" >
+        <div class="blog-list">
           <!-- 博客列表 -->
           <note-abstract
             :data="$recoPosts"
@@ -95,6 +96,7 @@ import PersonalInfo from "@theme/components/PersonalInfo";
 import { getOneColor } from "@theme/helpers/other";
 import moduleTransitonMixin from "@theme/mixins/moduleTransiton";
 import bgVideo from "./bgVideo";
+import HomeBgImg from "./HomeBgImg";
 import homeText from "./homeText";
 export default {
   mixins: [pagination, moduleTransitonMixin],
@@ -106,12 +108,14 @@ export default {
     PersonalInfo,
     bgVideo,
     homeText,
+    HomeBgImg
   },
   data() {
     return {
       recoShow: false,
       currentPage: 1,
       tags: [],
+      isBgVideo:false,//背面壁纸使用视频还是图片
     };
   },
   computed: {
@@ -154,6 +158,13 @@ export default {
   mounted() {
     this.recoShow = true;
     this._setPage(this._getStoragePage());
+    setTimeout(() => {
+      this.pageTitleHeight = this.$refs.homeWarp.clientHeight;
+      this.pTbgBar = document.querySelector(".pt-bgBar");
+      this.pTbgBar.style.opacity = "0";
+      document.documentElement.scrollTop = 0;
+      window.addEventListener("scroll", this.handleScrollChange);
+    }, 100);
   },
   methods: {
     // 获取当前页码
@@ -182,6 +193,19 @@ export default {
       this._setStoragePage(page);
     },
     getOneColor,
+    handleScrollChange(e) {
+      clearTimeout(this.ScrollTimer);
+
+      this.ScrollTimer = setTimeout(() => {
+        let prop = document.documentElement.scrollTop / this.pageTitleHeight;
+        if (prop < 1) {
+          this.pTbgBar.style.opacity = prop.toFixed(1);
+        }else{
+          this.pTbgBar.style.opacity = '1'
+
+        }
+      }, 100);
+    },
   },
 };
 </script>
@@ -202,17 +226,20 @@ export default {
     cursor: pointer;
     opacity: 0.2;
     z-index: 10;
-    animation arrowsMov 3s infinite
-    &:hover{
-      animation:none
-    }
+    animation: arrowsMov 3s infinite;
+
+   /*  &:hover {
+      animation: none;
+    } */
   }
+
   @keyframes arrowsMov {
-    0%{
+    0% {
       bottom: 4rem;
       opacity: 0.2;
     }
-    100%{
+
+    100% {
       bottom: 0;
       opacity: 0;
     }
@@ -357,8 +384,8 @@ export default {
       height: 450px;
 
       img {
-        max-height: 210px;
-        margin: 2rem auto 1.2rem;
+        // max-height: 210px;
+        // margin: 2rem auto 1.2rem;
       }
 
       h1 {
@@ -409,8 +436,8 @@ export default {
 
       // height 350px
       img {
-        max-height: 210px;
-        margin: 2rem auto 1.2rem;
+        // max-height: 210px;
+        // margin: 2rem auto 1.2rem;
       }
 
       h1 {
