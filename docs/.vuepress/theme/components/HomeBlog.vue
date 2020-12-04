@@ -402,7 +402,7 @@ export default {
       }
 
       .action-button {
-        font-size: 1rem;
+        font-size: 1rem; 
         padding: 0.6rem 1.2rem;
       }
     }
