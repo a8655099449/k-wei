@@ -191,7 +191,7 @@ let arr = [
 	age:50,
 	},
 ]
-// 筛选出年龄大于20岁的人
+
 let newArr = arr.map(v=>v.name)
 console.log(newArr); // 输出 ["张三", "李四", "王五", "赵六"]
 ```
@@ -199,6 +199,7 @@ console.log(newArr); // 输出 ["张三", "李四", "王五", "赵六"]
 ## `forEach()`
 > forEach是我们最常用的的一个数组方法之一
 > forEach没有返还值 , 作用和for类似 , 主要用于更加优雅的帮我们遍历数组的每一项
+
 
 ## `reduce()`
 > reduce方法常用于做一些计算方法
