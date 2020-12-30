@@ -1,7 +1,7 @@
 /*
  * @Date: 2020-11-29 20:32:56
- * @LastEditors: Please set LastEditors
- * @LastEditTime: 2020-12-02 11:29:39
+ * @LastEditors: kuangw
+ * @LastEditTime: 2020-12-22 07:14:13
  * @FilePath: \my-node\docs\.vuepress\theme\helpers\bz.js
  * @desc: Do not edit
  */
@@ -61,6 +61,15 @@ const bzarr = [
   'https://w.wallhaven.cc/full/v9/wallhaven-v9x3mp.jpg',
   'https://w.wallhaven.cc/full/dp/wallhaven-dpxqvo.jpg',
   'https://w.wallhaven.cc/full/57/wallhaven-57ljm8.jpg',
+  'http://image.woai996.com/picGo/20201222065002.png',
+  'http://image.woai996.com/picGo/20201222070819.jpeg',
+  'http://image.woai996.com/picGo/20201222070847.png',
+  'http://image.woai996.com/picGo/20201222070935.png',
+  'http://image.woai996.com/picGo/20201222071007.png',
+  'http://image.woai996.com/picGo/20201222071052.png',
+  'http://image.woai996.com/picGo/20201222071134.png',
+  'http://image.woai996.com/picGo/20201222071235.png',
+  'http://image.woai996.com/picGo/20201222071400.png',
 ];
 
 export default bzarr;

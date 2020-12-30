@@ -115,7 +115,7 @@ export default {
       recoShow: false,
       currentPage: 1,
       tags: [],
-      isBgVideo:false,//背面壁纸使用视频还是图片
+      isBgVideo:true,//背面壁纸使用视频还是图片
     };
   },
   computed: {

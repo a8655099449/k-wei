@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-27 16:48:49
- * @LastEditTime: 2020-11-28 21:43:50
+ * @LastEditTime: 2020-12-28 07:10:02
  * @LastEditors: kuangw
  * @Description: In User Settings Edit
  * @FilePath: \my-node\docs\.vuepress\theme\components\bgVideo.vue
@@ -33,7 +33,6 @@
     />
     <!--  -->
     <!-- 下拉箭头 -->
-   
 
     <!--    <div class="canvas-warp">
       <canvas ref="canvas" :height="canvas_h" :width="canvas_w" class="main-canvas"></canvas>
@@ -43,8 +42,22 @@
 
 
 <script>
-const video_arr = ["home-3", "home-4", "home-5", "home-6", "home-7", "home-8"];
-
+// const video_arr = ["home-3", "home-4", "home-5", "home-6", "home-8"];
+const video_arr = ["home-9", "home-10", "home-11", "home-12", "home-13",'home-14'];
+const video_arr2 = [
+  "//image.woai996.com/bgVideo/home-3.mp4",
+  "//image.woai996.com/bgVideo/home-4.mp4",
+  "//image.woai996.com/bgVideo/home-5.mp4",
+  "//image.woai996.com/bgVideo/home-6.mp4",
+  "//image.woai996.com/bgVideo/home-8.mp4",
+  "//image.woai996.com/bgVideo/home-9.mp4",
+  "//image.woai996.com/bgVideo/home-10.mp4",
+  "//image.woai996.com/bgVideo/home-11.mp4",
+  "//image.woai996.com/bgVideo/home-12.mp4",
+  "//image.woai996.com/bgVideo/home-13.mp4",
+  "//image.woai996.com/bgVideo/home-14.mp4",
+  "//image.woai996.com/bgVideo/home-15.mp4",
+];
 export default {
   data() {
     return {
@@ -76,8 +89,10 @@ export default {
   },
   computed: {
     getVideoSrc() {
-      // return require(`../local/${ video_arr[parseInt(Math.random() * video_arr.length)]}.mp4`);
-      return `http://image.woai996.com/video/home3.mp4`;
+      // return require(`../local/${video_arr[parseInt(Math.random() * video_arr.length)]}.mp4`);
+      // return require(`../local/home-15.mp4`);
+      return video_arr2[parseInt(Math.random() * video_arr2.length)];
+      // return `http://image.woai996.com/video/home3.mp4`;
       // return require(``)
     },
   },
@@ -130,8 +145,6 @@ export default {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-
-  
 }
 
 .main-canvas {
