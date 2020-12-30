@@ -2,8 +2,8 @@
 title: vscode 的自定义代码片段
 date: 2020-11-19
 tags:
- - 工具
- - vscode
+  - 工具
+  - vscode
 categories: tool
 ---
 
@@ -22,6 +22,7 @@ categories: tool
   "description": "vuepresss 的tip快"  // 注释
 }
 ```
+
 ### react
 
 ```json
@@ -42,17 +43,23 @@ categories: tool
   ],
   "description": "react的组件代码片段"
 },
-"Print to console": {
+"className": {
+		// "scope": "javascript,typescript",
+		"prefix": "cls",
+		"body": [
+			"className={`${styles['${1:classname}']}`}",
+		],
+		"description": "快速添加class"
+	},
+"impStyle": {
   // "scope": "javascript,typescript",
-  "prefix": "cls",
+  "prefix": "impstyles",
   "body": [
-    "className={styles['${1:classname}']}",
+    "import styles from './${1:$TM_FILENAME_BASE}.less';",
   ],
-  "description": "Log output to console"
+  "description": "导入样式"
 }
 ```
-
-
 
 ### 在代码片段中的变量
 
@@ -84,4 +91,3 @@ BLOCK_COMMENT_START 块注释开始标识,如 PHP /* 或 HTML <!--
 BLOCK_COMMENT_END 块注释结束标识,如 PHP */ 或 HTML -->
 LINE_COMMENT 行注释，如： PHP // 或 HTML <!-- -->
 ```
-
