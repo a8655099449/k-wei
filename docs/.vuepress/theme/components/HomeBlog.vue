@@ -118,6 +118,7 @@ export default {
       isBgVideo:true,//背面壁纸使用视频还是图片
     };
   },
+
   computed: {
     homeBlogCfg() {
       return this.$recoLocales.homeBlog;
@@ -165,6 +166,12 @@ export default {
       document.documentElement.scrollTop = 0;
       window.addEventListener("scroll", this.handleScrollChange);
     }, 100);
+    // 获得屏幕宽度
+     this.isBgVideo = document.documentElement.clientWidth > 800
+
+
+
+
   },
   methods: {
     // 获取当前页码

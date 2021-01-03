@@ -1,7 +1,7 @@
 /*
  * @Date: 2020-11-29 20:32:56
  * @LastEditors: kuangw
- * @LastEditTime: 2020-12-22 07:14:13
+ * @LastEditTime: 2021-01-03 19:44:14
  * @FilePath: \my-node\docs\.vuepress\theme\helpers\bz.js
  * @desc: Do not edit
  */
@@ -10,8 +10,8 @@ const bzarr = [
   "http://image.woai996.com/picGo/%E5%9D%90%E6%90%9C%E7%B4%A2.jpg",
   "http://image.woai996.com/picGo/anime.jpg",
   "http://image.woai996.com/picGo/20201129214708.jpg",
-  "https://w.wallhaven.cc/full/rd/wallhaven-rd3pjw.jpg",
-  "https://w.wallhaven.cc/full/9m/wallhaven-9mxz8k.jpg",
+  "//image.woai996.com/picGo/20210103175606.jpeg",
+/*   "https://w.wallhaven.cc/full/9m/wallhaven-9mxz8k.jpg",
   "https://w.wallhaven.cc/full/g8/wallhaven-g83m3d.jpg",
   "https://w.wallhaven.cc/full/39/wallhaven-39dmkd.jpg",
   "https://w.wallhaven.cc/full/j5/wallhaven-j5mz95.png",
@@ -60,16 +60,30 @@ const bzarr = [
   'https://w.wallhaven.cc/full/g7/wallhaven-g7zl1e.jpg',
   'https://w.wallhaven.cc/full/v9/wallhaven-v9x3mp.jpg',
   'https://w.wallhaven.cc/full/dp/wallhaven-dpxqvo.jpg',
-  'https://w.wallhaven.cc/full/57/wallhaven-57ljm8.jpg',
+  'https://w.wallhaven.cc/full/57/wallhaven-57ljm8.jpg', */
   'http://image.woai996.com/picGo/20201222065002.png',
   'http://image.woai996.com/picGo/20201222070819.jpeg',
   'http://image.woai996.com/picGo/20201222070847.png',
   'http://image.woai996.com/picGo/20201222070935.png',
   'http://image.woai996.com/picGo/20201222071007.png',
   'http://image.woai996.com/picGo/20201222071052.png',
-  'http://image.woai996.com/picGo/20201222071134.png',
+  // 'http://image.woai996.com/picGo/20201222071134.png',
   'http://image.woai996.com/picGo/20201222071235.png',
   'http://image.woai996.com/picGo/20201222071400.png',
+  'http://image.woai996.com/picGo/20210103175716.png',
+  'http://image.woai996.com/picGo/20210103175752.png',
+  'http://image.woai996.com/picGo/20210103175849.png',
+  'http://image.woai996.com/picGo/20210103180006.png',
+  'http://image.woai996.com/picGo/20210103180038.png',
+  'http://image.woai996.com/picGo/20210103180143.png',
+  'http://image.woai996.com/picGo/20210103180211.png',
+  'http://image.woai996.com/picGo/20210103180313.png',
+  'http://image.woai996.com/picGo/20210103180448.png',
+  'http://image.woai996.com/picGo/20210103180513.png',
+  'http://image.woai996.com/picGo/20210103180631.png',
+  // '',
+  // '',
+  // '',
 ];
 
 export default bzarr;
