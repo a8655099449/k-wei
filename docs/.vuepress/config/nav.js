@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-20 15:03:38
- * @LastEditTime: 2020-11-28 18:06:50
+ * @LastEditTime: 2021-01-06 21:56:34
  * @LastEditors: kuangw
  * @Description: In User Settings Edit
  * @FilePath: \my-node\docs\.vuepress\config\nav.js
@@ -99,6 +99,8 @@ const nav = [{
   }, */
   {
     text: '工具',
+    icon: 'iconfont iconhome',
+
     items: toolItems
   },
 

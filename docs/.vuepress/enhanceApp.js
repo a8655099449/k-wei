@@ -1,18 +1,11 @@
 /*
  * @Date: 2020-11-26 19:43:30
  * @LastEditors: kuangw
- * @LastEditTime: 2020-11-26 19:53:35
+ * @LastEditTime: 2021-01-06 21:28:45
  * @FilePath: \my-node\docs\.vuepress\enhanceApp.js
  * @desc: Do not edit
  */
 
-// import ElementUI from 'element-ui';
-// import Vant from 'vant';
-// import 'vant/lib/index.css';
-// import './public/css/element-variables.scss';
-// // import Clipboard from './components/Clipboard';
-// import Copy from './components/global/Copy';
-// import VueClipboard from 'vue-clipboard2'; // 引入复制粘贴组件
 
 import './public/css/iconfont.css'
 
