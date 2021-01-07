@@ -61,6 +61,27 @@ categories: tool
 }
 ```
 
+### vuepress-head
+
+```json
+"Print to console": {
+  "prefix": "head",
+  "body": [
+    "---",
+    "title: ${1:默认标题}",F
+    "date: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
+    "tags:",
+    " - 前端",
+    "categories: code",
+    "---",
+  ],
+  "description": "blog title"
+}
+```
+
+
+
+
 ### 在代码片段中的变量
 
 ```
