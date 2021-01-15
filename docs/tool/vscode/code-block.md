@@ -68,7 +68,7 @@ categories: tool
   "prefix": "head",
   "body": [
     "---",
-    "title: ${1:默认标题}",F
+    "title: ${1:默认标题}",
     "date: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
     "tags:",
     " - 前端",
@@ -76,6 +76,33 @@ categories: tool
     "---",
   ],
   "description": "blog title"
+},
+"tip": {
+  "prefix": "tip", 
+  "body": [  
+      ":::tip",
+      "$1",  
+      ":::"
+  ],
+  "description": "vuepresss 的tip快"  
+},
+"warning": {
+  "prefix": "warning", 
+  "body": [  
+      ":::warning",
+      "$1",  
+      ":::"
+  ],
+  "description": "vuepresss 的warning"  
+},
+"detail": {
+  "prefix": "detail", 
+  "body": [  
+      ":::detail",
+      "$1",  
+      ":::"
+  ],
+  "description": "vuepresss 的detail"  
 }
 ```
 
