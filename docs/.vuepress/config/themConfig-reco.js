@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2020-11-26 17:36:46
- * @LastEditTime: 2020-11-30 17:10:38
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-01-16 21:19:23
+ * @LastEditors: kuangw
  * @Description: In User Settings Edit
  * @FilePath: \my-node\docs\.vuepress\config\themConfig-reco.js
  */
@@ -41,7 +41,27 @@ const themeConfig = {
       location: 3,     // 在导航栏菜单中所占的位置，默认3
       text: 'Tag'      // 默认文案 “标签”
     }
-  }
+  },
+  friendLink: [
+    {
+      title: "后来的我们",
+      desc: "一个比较好看的博客，我的博客很多地方借鉴了对方",
+      // email: "1156743527@qq.com",
+      link: "//zyj_yida.gitee.io/",
+    },
+    // {
+    //   title: "vuepress-theme-reco",
+    //   desc: "A simple and beautiful vuepress Blog & Doc theme.",
+    //   avatar:
+    //     "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
+    //   link: "https://vuepress-theme-reco.recoluan.com",
+    // },
+    // {
+    //   title: 'ToFutureSelf',
+    //   desc: '花有重开日，人无再少年',
+    //   link: 'https://zhangfish.gitee.io/'
+    // }
+  ],
 }
 
 const themeConfig_reco = {

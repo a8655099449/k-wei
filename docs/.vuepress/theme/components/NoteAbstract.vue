@@ -1,3 +1,10 @@
+<!--
+ * @Date: 2020-11-27 20:09:59
+ * @LastEditors: kuangw
+ * @LastEditTime: 2021-01-16 21:42:22
+ * @FilePath: \my-node\docs\.vuepress\theme\components\NoteAbstract.vue
+ * @desc: Do not edit
+-->
 <template>
   <div class="abstract-wrapper">
     <NoteAbstractItem
@@ -14,6 +21,10 @@ import NoteAbstractItem from './NoteAbstractItem'
 
 export default {
   components: { NoteAbstractItem },
+  mounted(){
+    console.log(this.currentPageData);
+
+  },
   props: ['data', 'currentPage', 'currentTag'],
   computed: {
     currentPageData () {

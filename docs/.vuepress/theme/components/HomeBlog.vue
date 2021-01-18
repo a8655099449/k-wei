@@ -169,7 +169,7 @@ export default {
     // 获得屏幕宽度
      this.isBgVideo = document.documentElement.clientWidth > 800
 
-
+    console.log(this.isBgVideo);
 
 
   },
@@ -324,7 +324,7 @@ export default {
       position: -webkit-sticky;
       position: sticky;
       top: 70px;
-      overflow: hidden;
+      // overflow: hidden;
       transition: all 0.3s;
       margin-top: 15px;
       margin-left: 15px;
