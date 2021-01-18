@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-20 14:08:50
- * @LastEditTime: 2021-01-17 22:09:25
+ * @LastEditTime: 2021-01-18 21:28:03
  * @LastEditors: kuangw
  * @Description: In User Settings Edit
  * @FilePath: \my-node\docs\.vuepress\config.js
@@ -13,7 +13,7 @@ const themeConfig_default = require('./config/themConfig-default');
 module.exports = {
   ...themeConfig_reco,
   // base:'/static-blog/',
-  dest:'../k-wei2',
+  dest:'../k-wei-2',
   markdown: {
     extractHeaders: ["h2", "h3", "h4", "h5", "h6"],
   },
