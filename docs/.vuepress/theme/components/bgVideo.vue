@@ -43,7 +43,20 @@
 
 <script>
 // const video_arr = ["home-3", "home-4", "home-5", "home-6", "home-8"];
-const video_arr = ["home-9", "home-10", "home-11", "home-12", "home-13",'home-14'];
+const video_arr = [
+  "home-16",
+  "home-17",
+  "home-18",
+  "home-19",
+  "home-20",
+  "home-21",
+  "home-22",
+  "home-23",
+  "home-24",
+  "home-25",
+  "home-26",
+  "home-27",
+];
 const video_arr2 = [
   "//image.woai996.com/bgVideo/home-3.mp4",
   "//image.woai996.com/bgVideo/home-4.mp4",
@@ -57,6 +70,18 @@ const video_arr2 = [
   "//image.woai996.com/bgVideo/home-13.mp4",
   "//image.woai996.com/bgVideo/home-14.mp4",
   "//image.woai996.com/bgVideo/home-15.mp4",
+  "//image.woai996.com/bgVideo/home-16.mp4",
+  "//image.woai996.com/bgVideo/home-17.mp4",
+  "//image.woai996.com/bgVideo/home-18.mp4",
+  "//image.woai996.com/bgVideo/home-19.mp4",
+  "//image.woai996.com/bgVideo/home-20.mp4",
+  "//image.woai996.com/bgVideo/home-21.mp4",
+  "//image.woai996.com/bgVideo/home-22.mp4",
+  "//image.woai996.com/bgVideo/home-23.mp4",
+  "//image.woai996.com/bgVideo/home-24.mp4",
+  "//image.woai996.com/bgVideo/home-25.mp4",
+  "//image.woai996.com/bgVideo/home-26.mp4",
+  "//image.woai996.com/bgVideo/home-27.mp4",
 ];
 export default {
   data() {
@@ -90,6 +115,7 @@ export default {
   computed: {
     getVideoSrc() {
       // return require(`../local/${video_arr[parseInt(Math.random() * video_arr.length)]}.mp4`);
+      // return require(`../local/home-27.mp4`);
       // return require(`../local/home-15.mp4`);
       return video_arr2[parseInt(Math.random() * video_arr2.length)];
       // return `http://image.woai996.com/video/home3.mp4`;
@@ -107,6 +133,8 @@ export default {
         }, 500);
       } */
       this.video.play();
+      
+
     },
     drawImage() {
       setInterval(() => {
