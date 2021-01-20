@@ -49,18 +49,6 @@ const themeConfig = {
       // email: "1156743527@qq.com",
       link: "//zyj_yida.gitee.io/",
     },
-    // {
-    //   title: "vuepress-theme-reco",
-    //   desc: "A simple and beautiful vuepress Blog & Doc theme.",
-    //   avatar:
-    //     "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
-    //   link: "https://vuepress-theme-reco.recoluan.com",
-    // },
-    // {
-    //   title: 'ToFutureSelf',
-    //   desc: '花有重开日，人无再少年',
-    //   link: 'https://zhangfish.gitee.io/'
-    // }
   ],
 }
 
