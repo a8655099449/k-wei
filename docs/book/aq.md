@@ -4,6 +4,7 @@ date: 2021-01-18
 tags:
  - 读书
 categories: book
+pic : '//photo.tuituisoft.com/picgo/20210119154721.png'
 ---
 
 在谈论《阿Q》前我想说说鲁迅的作品，鲁迅自然是一点都不会陌生，学生时代学过他的不少文章，如《孔乙己》《故乡》，
