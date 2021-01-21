@@ -1,11 +1,4 @@
-/*
- * @Author: your name
- * @Date: 2020-11-20 14:08:50
- * @LastEditTime: 2021-01-18 21:28:03
- * @LastEditors: kuangw
- * @Description: In User Settings Edit
- * @FilePath: \my-node\docs\.vuepress\config.js
- */
+
 
 const themeConfig_reco = require("./config/themConfig-reco");
 const themeConfig_default = require("./config/themConfig-default");
