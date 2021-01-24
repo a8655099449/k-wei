@@ -66,26 +66,34 @@ export default {
   background-color: var(--background-color);
   cursor: pointer;
   display: flex;
-
+  // align-items stretch
+  align-self stretch
+  max-height 600px
   .img-box {
     width: 30%;
     margin-right: 20px;
+    max-height: 600px;
+    overflow: hidden;
+    display flex
+    align-items center
 
     img {
       width: 100%;
       border-radius: 4px;
-      max-height: 130px;
+      object-fit: cover;
+      border-radius 3px
     }
   }
 
   .content {
     width: calc(70% - 20px);
+    // height 100%
     // directio
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 10px 0;
-    margin-top 0
+    padding: 5px 0;
+    margin-top: 0;
   }
 
   &> * {
@@ -163,15 +171,14 @@ export default {
 
   .abstract-item {
     display: block;
+
     .content {
-    width: 100%;
-  }
+      width: 100%;
+    }
 
-  .img-box {
-    width: 100%;
+    .img-box {
+      width: 100%;
+    }
   }
-  }
-
-  
 }
 </style>
