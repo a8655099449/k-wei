@@ -167,7 +167,7 @@ categories: tool
 ```
 :::
 
-- page
+- tabpage
 
 :::details 展开查看
 ```json
@@ -192,6 +192,35 @@ categories: tool
 },
 ```
 :::
+- page
+
+```json
+"page": {
+  "prefix": "page",
+  "body": [
+    "import 'package:flutter/material.dart';\n",
+    "class ${1:$TM_FILENAME_BASE} extends StatefulWidget {",
+    "\t${1:$TM_FILENAME_BASE}({Key key}) : super(key: key);",
+    "\t@override",
+    "\t_${1:$TM_FILENAME_BASE}State createState() => _${1:$TM_FILENAME_BASE}State();",
+    "}\n",
+    "class _${1:$TM_FILENAME_BASE}State extends State<${1:$TM_FILENAME_BASE}> {",
+    "\t@override",
+    "\tWidget build(BuildContext context) {",
+    "\t\treturn  Scaffold(",
+    "\t\t\tappBar: AppBar(",
+    "\t\t\t\ttitle: Text('${1:$TM_FILENAME_BASE}'),",
+    "\t\t\t),",
+    "\t\t\tbody: Center(child: Text('${1:$TM_FILENAME_BASE}')),",
+    "\t\t);",
+    "\t}",
+    "}",
+
+  ],
+  "description": "my page"
+},
+```
+
 
 
 ### 在代码片段中的变量
