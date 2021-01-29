@@ -96,7 +96,6 @@ export default {
   mounted() {
     this.video = this.$refs.video;
     this.body = this.$refs.body;
-    // console.log("我加载了");
 
     // this.canvas = this.$refs.canvas;
     // this.ctx = this.canvas.getContext("2d");

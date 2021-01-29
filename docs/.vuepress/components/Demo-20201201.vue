@@ -43,14 +43,12 @@ export default {
         themeObj = lightTheme;
         this.theme = "light";
       }
-      // console.log(this.appDom.style.setProperty);
       for (const key in themeObj) {
         this.appDom.style.setProperty(key,themeObj[key]);
       }
     },
   },
   mounted() {
-    console.log();
     this.appDom = this.$refs["app"];
   },
 };

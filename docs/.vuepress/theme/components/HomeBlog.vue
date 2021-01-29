@@ -169,9 +169,6 @@ export default {
     // 获得屏幕宽度
      this.isBgVideo = document.documentElement.clientWidth > 800
 
-    console.log(this.isBgVideo);
-
-
   },
   methods: {
     // 获取当前页码

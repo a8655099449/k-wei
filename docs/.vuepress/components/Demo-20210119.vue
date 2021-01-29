@@ -68,7 +68,6 @@ export default {
       if (this.circle < 10) {
         this.interval += 50;
       }
-      console.log(this.interval);
       if (this.circle == 0) {
         // alert();
         this.text = this.list[this.selectIndex];

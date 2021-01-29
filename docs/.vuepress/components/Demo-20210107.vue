@@ -26,7 +26,6 @@ export default {
   methods:{
     setScroll(num){
       this.$refs.warp.scrollTop = num
-      console.log(num);
     },
     changeScroll(){
       this.scrollTop = this.$refs.warp.scrollTop

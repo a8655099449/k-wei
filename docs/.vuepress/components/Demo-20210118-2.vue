@@ -63,7 +63,6 @@ export default {
   },
   methods: {
     handleBannerMove(e) {
-      // console.log(e.clientX/window.outerWidth)
       this.$refs["banner"].classList.add("move");
       let percentage = (e.clientX - this.startPoint) / window.outerWidth + 0.5;
       this.$refs["banner"].style.setProperty("--percentage", percentage);

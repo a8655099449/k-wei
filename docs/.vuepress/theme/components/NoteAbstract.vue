@@ -21,10 +21,7 @@ import NoteAbstractItem from './NoteAbstractItem'
 
 export default {
   components: { NoteAbstractItem },
-  mounted(){
-    console.log(this.currentPageData);
-
-  },
+ 
   props: ['data', 'currentPage', 'currentTag'],
   computed: {
     currentPageData () {

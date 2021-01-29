@@ -48,7 +48,6 @@ export default {
 
   methods: {
     selectMode (mode) {
-      console.log(mode);
       
       if (mode !== this.currentMode) {
         this.currentMode = mode

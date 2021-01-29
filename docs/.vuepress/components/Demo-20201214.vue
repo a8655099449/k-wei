@@ -22,7 +22,6 @@ export default {
     }
   },
   mounted(){
-    // console.log(YZM);
     this.codeObj = new YZM('#canvas')
     this.code = this.codeObj.createCode()
   },

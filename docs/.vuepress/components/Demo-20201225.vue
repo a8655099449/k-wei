@@ -32,7 +32,6 @@
 <script>
 export default {
   mounted() {
-    console.log(this.$refs.bannner);
     this.images = this.$refs.bannner.querySelectorAll("img");
     this.$refs.bannner.addEventListener("mousemove", this.changeMove);
     this.$refs.bannner.addEventListener("mouseout", this.setDefault);
@@ -44,12 +43,10 @@ export default {
       let percentage = e.clientX / window.outerWidth;
       let offset = 10 * percentage;
       let blur = 20;
-      // console.log(percentage)
       for (let [index, image] of images.entries()) {
         offset *= 1.3;
 
         let blurValue = Math.pow(index / images.length - percentage, 2) * blur;
-        // console.log(blurValue, offset)
         image.style.setProperty("--offset", `${offset}px`);
         image.style.setProperty("--blur", `${blurValue}px`);
       }
@@ -62,7 +59,6 @@ export default {
 
       for (let [index, image] of images.entries()) {
         let blurValue = Math.pow(index / images.length - percentage, 2) * blur;
-        // console.log(blurValue, offset)
         image.style.setProperty("--offset", `${offset}px`);
         image.style.setProperty("--blur", `${blurValue}px`);
       }

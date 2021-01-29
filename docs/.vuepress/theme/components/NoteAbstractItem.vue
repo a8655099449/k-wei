@@ -40,7 +40,6 @@ export default {
   components: { PageInfo },
   props: ["item", "currentPage", "currentTag"],
   created() {
-    console.log(this.item.frontmatter.pic);
     if (this.item.frontmatter.pic) {
       this.imgPic = this.item.frontmatter.pic;
     } else {

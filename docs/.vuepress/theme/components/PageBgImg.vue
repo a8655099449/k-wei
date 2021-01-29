@@ -23,10 +23,8 @@ export default {
   },
   methods: {
     handleImgLoad() {
-      // console.log('图片加载好了');
       let imgHeight = this.$refs["bgImg"].clientHeight;
       let warpHeight = this.$refs["bgImgWarp"].clientHeight;
-      // console.log(imgHeight-warpHeight);
       document
         .querySelector(":root")
         .style.setProperty(

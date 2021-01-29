@@ -45,7 +45,6 @@ export default {
     // modePicker 关闭时默认使用主题设置的模式
     const themeMode = this.$themeConfig.mode || 'auto'
 		const { modePicker } = this.$themeConfig
-		// console.log(themeMode,modePicker);
 		
     /* if (modePicker === false) {
       // 为 'auto' 模式设置监听器

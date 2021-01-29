@@ -13,7 +13,7 @@ class YZM {
     }
   ) {
 
-    console.log(select);
+    flutter-基础(select);
 
     this.canvas = document.querySelector(select);
     this.ctx = this.canvas.getContext("2d");
@@ -21,7 +21,6 @@ class YZM {
     this.w = this.canvas.width;
     this.code = "";
     this.codeNum = codeNum;
-    console.log(this.codeNum);
   }
 
   createCode() {
