@@ -8,6 +8,7 @@
 <template>
   <div class="home-center-text">
     <p>{{ text }} <span v-show="focusShow">|</span></p>
+    <p>{{ entext }} <span v-show="focusShow">|</span></p>
   </div>
 </template>
 
@@ -18,6 +19,7 @@ export default {
   data() {
     return {
       text: "",
+      entext: "",
       focusShow: true,
     };
   },
@@ -29,44 +31,88 @@ export default {
     // 启动一个开始打字的定时器
     startInpText() {
       this.focusShow = true;
-      let getRomdonText = this.getRomdonText();
+      let romdonText = this.getRomdonText();
+      if (!romdonText.zh) {
+        return this.startZhTimer(romdonText, true);
+      }
+
+      this.startZhTimer(romdonText.zh, true);
+      this.startZhTimer(romdonText.en, false);
+      // console.log('准备启动中英双语定时器');
+
       // this.text = getRomdonText
-      let textLen = getRomdonText.length;
+    },
+
+    startZhTimer(text, iszh = true) {
+      let textLen = text.length;
+      let allTime = 1000 * 5;
+      let intTime = Math.ceil(allTime / textLen);
+      let clearTime = Math.ceil(allTime / textLen / 3);
       let count = 0;
-      this.startTimer = setInterval(() => {
-        this.text += getRomdonText[count];
+      let timer = setInterval(() => {
+        if (iszh) {
+          this.text += text[count];
+        } else {
+          this.entext += text[count];
+        }
         count++;
         if (count == textLen) {
           this.focusShow = false;
-          clearInterval(this.startTimer);
-
+          clearInterval(timer);
           this.Timeout2 = setTimeout(() => {
-            this.startDelteTimer();
+            this.startDelteTimer(clearTime, iszh);
           }, 5000);
         }
-      }, 200);
+      }, intTime);
+      if (iszh) {
+        this.enTimer = timer;
+      } else {
+        this.zhTimer = timer;
+      }
     },
-    startDelteTimer() {
+
+    startDelteTimer(clearTime, iszh) {
       this.focusShow = true;
 
-      this.delteTimer = setInterval(() => {
-        this.text = this.text.substr(0, this.text.length - 1);
-        if (this.text.length === 0) {
-          this.focusShow = false;
+      let timer = setInterval(() => {
+        if (iszh) {
+          this.text = this.text.substr(0, this.text.length - 1);
+          if (this.text.length === 0) {
+            this.focusShow = false;
 
-          clearInterval(this.delteTimer);
-          this.Timeout1 = setTimeout(() => {
-            this.startInpText();
-          }, 1000);
+            clearInterval(timer);
+            this.Timeout1 = setTimeout(() => {
+              this.startInpText();
+            }, 1000);
+          }
+        } else {
+          this.entext = this.entext.substr(0, this.entext.length - 1);
+          if (this.entext.length === 0) {
+            this.focusShow = false;
+            clearInterval(timer);
+          }
         }
-      }, 50);
+      }, clearTime);
+
+      if (iszh) {
+        this.enTimer2 = timer;
+      } else {
+        this.zhTimer2 = timer;
+      }
+
     },
     getRomdonText() {
       return arr[parseInt(Math.random() * arr.length)];
     },
     clertAllTimer() {
-      clearInterval(this.delteTimer);
-      clearInterval(this.startTimer);
+      // clearInterval(this.delteTimer);
+      // clearInterval(this.startTimer);
+      clearInterval(this.enTimer );
+      clearInterval(this.zhTimer );
+      clearInterval(this.enTimer2 );
+      clearInterval(this.zhTimer2 );
+
+
       clearTimeout(this.Timeout1);
       clearTimeout(this.Timeout2);
     },
@@ -87,8 +133,9 @@ export default {
   right: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
+  // align-items: center;
   color: #d6dce5;
+  flex-wrap wrap;
 
   p {
     font-size: 2rem;
