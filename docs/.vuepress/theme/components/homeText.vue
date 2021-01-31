@@ -8,7 +8,7 @@
 <template>
   <div class="home-center-text">
     <p>{{ text }} <span v-show="focusShow">|</span></p>
-    <p>{{ entext }} <span v-show="focusShow">|</span></p>
+    <p v-show="enshow">{{ entext }} <span v-show="focusShow">|</span></p>
   </div>
 </template>
 
@@ -21,6 +21,7 @@ export default {
       text: "",
       entext: "",
       focusShow: true,
+      enshow:false
     };
   },
   mounted() {
@@ -44,6 +45,8 @@ export default {
     },
 
     startZhTimer(text, iszh = true) {
+      this.enshow = !iszh
+
       let textLen = text.length;
       let allTime = 1000 * 5;
       let intTime = Math.ceil(allTime / textLen);
@@ -133,15 +136,18 @@ export default {
   right: 0;
   display: flex;
   justify-content: center;
-  // align-items: center;
+  align-items: center;
   color: #d6dce5;
   flex-wrap wrap;
+  flex-direction column
 
   p {
     font-size: 2rem;
     width: 80%;
     font-family: Regular, cursive;
     transition: all 0.25s ease-in-out 0.04s;
+    height 100px
+    margin: 0 auto; 
   }
 
   span {
