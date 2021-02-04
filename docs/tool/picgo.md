@@ -2,7 +2,7 @@
 title: picGo的使用
 date: 2020-11-23
 tags:
-- mackdown
+- markdown
 - 工具
 categories: tool
 ---
