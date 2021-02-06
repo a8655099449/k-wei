@@ -78,11 +78,12 @@ import PersonalInfo from '@theme/components/PersonalInfo'
 import Password from '@theme/components/Password'
 import { setTimeout } from 'timers'
 import moduleTransitonMixin from '@theme/mixins/moduleTransiton'
+import LoadingPage from './LoadingPage'
 
 export default {
   mixins: [moduleTransitonMixin],
 
-  components: { Sidebar, Navbar, Password, PersonalInfo },
+  components: { Sidebar, Navbar, Password, PersonalInfo,LoadingPage },
 
   props: {
     sidebar: {
