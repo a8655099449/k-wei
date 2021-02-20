@@ -10,30 +10,22 @@
 
 
 const head = [
-  ["link", { rel: "icon", href: "/icons/favicon.ico" }], // 增加一个自定义的 favicon(网页标签的图标)
   [
-    "script",
+    'link',
     {
-      src:
-        "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js",
-    },
+      rel:'apple-touch-icon',
+      sizes:"76x76",
+      href:'/images/logo.png'
+    }
   ],
   [
-    "script",
+    'meta',
     {
-      src:
-        "https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.js",
-    },
+      name:'apple-mobile-web-app-capable',
+      content:"yes",
+    }
   ],
-  [
-    "link",
-    {
-      rel: "stylesheet",
-      type: "text/css",
-      href:
-        "https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.css",
-    },
-  ],
+
 ]
 
 module.exports = head

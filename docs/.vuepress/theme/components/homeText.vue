@@ -7,8 +7,10 @@
 -->
 <template>
   <div class="home-center-text">
-    <p>{{ text }} <span v-show="focusShow">|</span></p>
-    <p v-show="enshow">{{ entext }} <span v-show="focusShow">|</span></p>
+    <template v-if="!ismini">
+      <p>{{ text }} <span v-show="focusShow">|</span></p>
+      <p v-show="enshow">{{ entext }} <span v-show="focusShow">|</span></p>
+    </template>
   </div>
 </template>
 
@@ -21,11 +23,17 @@ export default {
       text: "",
       entext: "",
       focusShow: true,
-      enshow:false
+      enshow: false,
+      ismini: false,
     };
   },
   mounted() {
-    this.startInpText();
+    if (document.documentElement.clientWidth < 800) {
+      this.ismini = true;
+      console.log('小屏幕');
+    }else{
+      this.startInpText()
+    }
   },
 
   methods: {
@@ -45,7 +53,7 @@ export default {
     },
 
     startZhTimer(text, iszh = true) {
-      this.enshow = !iszh
+      this.enshow = !iszh;
 
       let textLen = text.length;
       let allTime = 1000 * 5;
@@ -102,7 +110,6 @@ export default {
       } else {
         this.zhTimer2 = timer;
       }
-
     },
     getRomdonText() {
       return arr[parseInt(Math.random() * arr.length)];
@@ -110,11 +117,10 @@ export default {
     clertAllTimer() {
       // clearInterval(this.delteTimer);
       // clearInterval(this.startTimer);
-      clearInterval(this.enTimer );
-      clearInterval(this.zhTimer );
-      clearInterval(this.enTimer2 );
-      clearInterval(this.zhTimer2 );
-
+      clearInterval(this.enTimer);
+      clearInterval(this.zhTimer);
+      clearInterval(this.enTimer2);
+      clearInterval(this.zhTimer2);
 
       clearTimeout(this.Timeout1);
       clearTimeout(this.Timeout2);
@@ -138,16 +144,16 @@ export default {
   justify-content: center;
   align-items: center;
   color: #d6dce5;
-  flex-wrap wrap;
-  flex-direction column
+  flex-wrap: wrap;
+  flex-direction: column;
 
   p {
     font-size: 2rem;
     width: 80%;
     font-family: Regular, cursive;
     transition: all 0.25s ease-in-out 0.04s;
-    height 100px
-    margin: 0 auto; 
+    height: 100px;
+    margin: 0 auto;
   }
 
   span {

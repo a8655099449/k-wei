@@ -2,8 +2,8 @@
 title: 如何在vscode 中自定义代码块
 date: 2020-11-23
 tags:
- - vscode
- - 工具
+  - vscode
+  - 工具
 categories: tool
 ---
 
@@ -25,7 +25,8 @@ categories: tool
 }
 ```
 
-4. 在md文件中可能无法触发代码块，这时我们要去设置文件中增加以下配置
+4. 在 md 文件中可能无法触发代码块，这时我们要去设置文件中增加以下配置
+
 ```json
 "[markdown]": {
   "editor.quickSuggestions": true

@@ -29,7 +29,9 @@ live server 启动后会在当前的目录运行一个本地服务器，当你�
 这个插件和上面的插件功能类似，安装后在`.html`右键后就会出现`open in browser`的选项，跟上面的插件相比，运用于调试不那么频繁的项目或者写一些小demo
 :::
 
-### easy sass 和 easy less
+###  easy sass 和 easy less
+
+
 ::: tip
 如果你也和我一样，喜欢使用sass和less那么这两个插件也是必装的了，当你按下`ctrl+s`时，会自动的在目录中生成一个`.css`后缀的同名文件，这两个插件支持配置，可以运用于更多的场景
 :::
@@ -41,6 +43,8 @@ live server 启动后会在当前的目录运行一个本地服务器，当你�
 
     {
       "format": "expanded",
+
+      
       // format 的合法值
       //nested：嵌套缩进的 css 代码。
       //expanded：没有缩进的、扩展的css代码。
@@ -55,6 +59,10 @@ live server 启动后会在当前的目录运行一个本地服务器，当你�
   ],
   "easysass.targetDir": "./css/" //提供 css 输出路径的设置（可以是绝对路径或者相对路径） 可以选填，如果不配置则默认是同路径之下
 }
+
+
+
+
 
 ```
 #### easy less 的配置

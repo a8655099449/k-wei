@@ -14,11 +14,11 @@
 </template>
 
 <script>
-import bzArr from "../helpers/bz";
+import {Bz_Phone} from "../helpers/bz";
 export default {
   computed: {
     getImgSrc() {
-      return bzArr[parseInt(Math.random() * bzArr.length)];
+      return Bz_Phone[parseInt(Math.random() * Bz_Phone.length)];
     },
   },
 };
@@ -46,6 +46,8 @@ export default {
   .home-bg-img img {
     width: auto;
     height: 100vh;
+    width: 100vw;
+    object-fit: cover;
   }
 }
 </style>

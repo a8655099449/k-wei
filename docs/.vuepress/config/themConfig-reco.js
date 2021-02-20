@@ -8,6 +8,8 @@
  */
 const nav = require("./nav")
 const head = require('./head');
+
+
 nav.push({ text: '时间线', link: '/timeline/', icon: 'reco-date' })
 const themeConfig = {
   type: 'blog',
