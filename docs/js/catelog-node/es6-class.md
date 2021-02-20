@@ -85,10 +85,59 @@ class Women extends Men{
 - 定时器的this指向的是window
 - 立即执行函数的this指向的也是window
 
-> ### this指向的改变方法
-1.使用call方法调用函数时，第一个参数传递一个对象即可改变this的指向
-2.使用apply函数调用 也可以改变this的指向，和上面的区别在于，第二个参数是个数组 
-3.使用bind函数修改也可以修改this的指向，bind函数并不会去调用这个函数，用的场景也更多
+## 改变this指向值的3种方法
+:::warning
+箭头函数的this永远指向上下文，无法修改指向
+:::
+
+### 1. call() 的使用
+> 第一个参数是this的指向值，2-n个参数属于实际的参数
+```js
+let a = {
+  name: "张三",
+};
+function fun1(p1, p2, p3) {
+  console.log(this.name); // 输出张三
+  console.log(p1,p2,p3); // 输出 1，2，3
+}
+
+fun1.call(a, 1, 2, 3);
+```
+### 2. apply()的使用
+> `apply`的使用方法几乎和`call`差不多，区别在于，第二个参数类型为数组
+
+```js
+let a = {
+  name: "张三",
+};
+function fun1(p1, p2, p3) {
+  console.log(this.name); // 输出张三
+  console.log(p1,p2,p3); // 输出 1，2，3
+}
+
+fun1.apply(a, [1, 2, 3]);
+```
+
+### bind的使用
+> `bind`不会立即调用函数，而是返回一个新的函数，其余特性和`call`有些类似
+
+```js
+let a = {
+  name: "张三",
+};
+function fun1(p1, p2, p3) {
+  console.log(this.name); // 输出张三
+  console.log(p1,p2,p3); // 输出 1，2，3
+}
+
+let fun2 = fun1.bind(a,1,2,3)
+fun2()
+```
+
+
+[另一篇博客-介绍手写bind](/js/bind.html)
+
+
 
 
 ## 对象的`__proto__` 对象

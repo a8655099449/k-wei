@@ -157,11 +157,10 @@ console.log(f.name); // '张三'
 
 
 ## 2 继承
-## 2.1 原型链
-当一个原型链指向另一个原型链的时候，这时候他们就
+
 
 ## 2.2继承
-```
+```js
  //先定义三个构造函数
 
 // 构造函数A
@@ -199,13 +198,18 @@ console.log(c1.say());  // 'C'
 //这时候我们会发现  C居然也有了say这个函数了  这是因为b继承了 a  b有了say这个方法 而c继承了b   所有c也有了
 ```
 
+:::warning
+我们可以发现，js的原型链基础方法十分粗暴，只需要把`protype`属性指向其他的构造函数即可
+:::
+
+
 ```javascript
 // 这里我们会发现一个问题  当我们打印b的指向时， 会发现输出的都是A的构造函数
    // 这里我们会发现一个问题  当我们打印b和c的指向时， 会发现输出的都是A的构造函数
-   console.log(B.prototype.constructor);  // ƒ A() {}
-   let b1 = new B();
-   console.log(b1.constructor);   // ƒ A() {}
-   console.log(C.prototype.constructor);// ƒ A() {}
+console.log(B.prototype.constructor);  // ƒ A() {}
+let b1 = new B();
+console.log(b1.constructor);   // ƒ A() {}
+console.log(C.prototype.constructor);// ƒ A() {}
 ```
 
 - 为什么会出现这种情况
@@ -236,7 +240,7 @@ B = {
 		say: function() {
 			return this.name;
 		},
-		prototype：{
+		prototype:{
 			constructor: A
 		}
     }

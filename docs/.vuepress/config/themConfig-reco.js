@@ -49,8 +49,16 @@ const themeConfig = {
       // email: "1156743527@qq.com",
       link: "//zyj_yida.gitee.io/",
     },
+    {
+      title: "lin",
+      // desc: "一个比较好看的博客，我的博客很多地方借鉴了对方",
+      // email: "1156743527@qq.com",
+      link: "//xulin.vip/",
+    },
   ],
 }
+
+
 
 const themeConfig_reco = {
   theme: 'reco',
