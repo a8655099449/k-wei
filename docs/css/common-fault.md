@@ -74,6 +74,49 @@ box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 
 ```
 
+
+## 实现固定宽高比
+1. `img`和`video`标签本身具有像素的特性，所以如果只设置宽/高，另一项就会根据图片的尺寸来自动的调节尺寸
+
+2. 使用`aspect-ratio`
+
+这种方案可以说是非常简单了，缺点在于浏览器的兼容性不好
+
+```css
+.app {
+  width: 100px;
+  /* aspect-ratio: 16/9; */
+  aspect-ratio: 1; 
+  background: #000;
+}
+```
+
+3. 使用`padding-bottom`属性
+
+以下的代码也能实现一个固定宽高比的元素，只是目前只有一个空盒子而已，如果要添加内容可能就需要借助`绝对定位`了,而且嵌套也较多
+
+```html
+<style>
+.wrapper {
+  width: 40vw;
+}
+.intrinsic-aspect-ratio-container {
+  width: 100%;
+  padding-bottom: 100%;
+  background-color: lightsalmon;
+}
+
+
+</style>
+
+<div class="wrapper">
+  <div class="intrinsic-aspect-ratio-container"></div>
+</div>
+```
+
+
+
+
 ## 通用集合 
 
 :::details 查看代码
