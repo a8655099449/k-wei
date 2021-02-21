@@ -7,25 +7,23 @@
  * @FilePath: \new-node\docs\.vuepress\config\hred.js
  */
 
-
-
 const head = [
   [
-    'link',
+    "link",
     {
-      rel:'apple-touch-icon',
-      sizes:"76x76",
-      href:'/images/logo.png'
-    }
+      rel: "apple-touch-icon",
+      sizes: "76x76",
+      href: "/images/logo2.png",
+    },
   ],
   [
-    'meta',
+    "meta",
     {
-      name:'apple-mobile-web-app-capable',
-      content:"yes",
-    }
+      name: "apple-mobile-web-app-capable",
+      content: "yes",
+    },
   ],
+  ["link", { rel: "icon", href: "/images/logo2.png" }],
+];
 
-]
-
-module.exports = head
+module.exports = head;
