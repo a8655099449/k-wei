@@ -311,7 +311,7 @@ export const miniPicArr = [
   // '',
   // '',
 ];
-
+// ! 手机壁纸  鬼刀系列
 export let Bz_Phone = [
   "https://pic2.zhimg.com/v2-ad37b6dc6b87e21c23e4ae797cf8381d_r.jpg",
   "https://pic2.zhimg.com/v2-a7e1315729bdbb9e6fd9d91927e526f5_r.jpg",

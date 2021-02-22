@@ -78,5 +78,19 @@
 			"|   2   | 1 |",
 		],
 		"description": "table"
+	},
+
+	"wallper": {
+		"prefix": "wallper",
+		"scope": "javascript",
+		"body": [
+			"const data = [",
+			"\t'',",
+			"]\n",
+			"const title = '${1:黑色系列}'\n",
+			"const wallper_$TM_FILENAME_BASE = {data,title}",
+			"export default wallper_$TM_FILENAME_BASE\n",
+		],
+		"description": "wallper"
 	}
 }
