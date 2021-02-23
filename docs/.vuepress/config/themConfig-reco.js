@@ -52,10 +52,10 @@ const themeConfig = {
       link: "//zyj_yida.gitee.io/",
     },
     {
-      title: "lin",
-      // desc: "一个比较好看的博客，我的博客很多地方借鉴了对方",
+      title: "live music",
+      desc: "使用react写的一个仿网易云网站",
       // email: "1156743527@qq.com",
-      link: "//xulin.vip/",
+      link: "//music.woai996.com",
     },
   ],
 }
