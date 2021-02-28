@@ -92,5 +92,15 @@
 			"export default wallper_$TM_FILENAME_BASE\n",
 		],
 		"description": "wallper"
-	}
+	},
+	"link": {
+		"prefix": "link",
+		"scope": "markdown",
+		"body": [
+			"[${2:text}](${1:https://link})"
+		],
+		"description": "link 链接跳转"
+	},
+
+
 }
