@@ -137,8 +137,3 @@ export default {
   }
 }
 </style>
-<style >
-.side-bar {
-  display: none;
-}
-</style>

@@ -35,6 +35,6 @@ const sidebar = {
   '/js/':sidebarGroup,
   '':'auto'
 }
- */
+*/
 
 module.exports = sidebar

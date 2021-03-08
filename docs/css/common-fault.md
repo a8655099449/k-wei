@@ -115,6 +115,31 @@ box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 ```
 
 
+## 表格取消间隔
+
+```css
+border-collapse: collapse;
+```
+
+## flex
+- 让内容居右显示
+```css
+display: flex;
+justify-content: flex-end;
+```
+
+## 解决下拉hover有间隔时列表，马上消失问题
+![alt](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ae80e6b5b0cb45e59c4d1f1136297d90~tplv-k3u1fbpfcp-watermark.image)
+
+```css
+/* 父元素 */
+visibility: visible;
+
+/* 子元素 */
+visibility: hidden;
+transition: visibility 0.3s;
+```
+
 
 
 ## 通用集合 

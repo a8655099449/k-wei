@@ -159,9 +159,9 @@ export default {
 }
 </style>
 <style >
-.side-bar {
+/* .side-bar {
   display: none;
-}
+} */
 </style>
 ```
 :::
