@@ -12,9 +12,6 @@ class YZM {
       codeNum: 4,
     }
   ) {
-
-    flutter-基础(select);
-
     this.canvas = document.querySelector(select);
     this.ctx = this.canvas.getContext("2d");
     this.h = this.canvas.height;
