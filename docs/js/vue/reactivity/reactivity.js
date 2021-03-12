@@ -23,25 +23,23 @@ let obj = reactive({
   age:18
 })
 
-// 这里会触发 get() 函数，具体返回的数据根据 get() return 的值决定
-console.log(obj.age); // 输出18
-console.log(obj.sex); // 输出我们事先定义的默认值
 
 
-// 这里会触发 `set()` 函数
-
-
-
-
-
-let arr = []
-try {
-  console.log('===============push=====================');
-  arr.push(1)
-} finally{
-  console.log('===============finally=====================');
-  arr.pop()
+function getType(obj){
+  let type  = typeof obj;
+  if (type !== "object") {    // 先进行typeof判断，如果是基础数据类型，直接返回
+    return type;
+  }
+  // 对于typeof返回结果是object的，再进行如下的判断，正则返回结果
+  return Object.prototype.toString.call(obj).replace(/^\[object (\S+)\]$/, '$1').toLowerCase() 
 }
 
-console.log('===============arr=====================');
-console.log(arr);
+getType([])     // "Array" typeof []是object，因此toString返回
+getType(5)     // "Array" typeof []是object，因此toString返回
+getType('123')  // "string" typeof 直接返回
+getType(null)   // "Null"首字母大写，typeof null是object，需toString来判断
+getType(undefined)   // "undefined" typeof 直接返回
+getType()            // "undefined" typeof 直接返回
+getType(function(){}) // "function" typeof能判断，因此首字母小写
+getType(/123/g)      //"RegExp" toString返回
+
