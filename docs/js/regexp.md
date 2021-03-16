@@ -160,7 +160,48 @@ str.match(reg);
 // 在这个案例中，ac 和  ce 都符合正则匹配的要求
 // 但是在这里只会匹配出 ac
 ```
-
 2. 贪婪
 
 能匹配多就不匹配少
+
+
+## js字符串内置方法
+
+正则主要就是对于字符串的一些处理，所以了解js内置的字符串方法也有助于我们理解正则
+
+### `toLowerCase` 和 `toUpperCase`
+转换字符串为大写或者小写
+
+
+### indexOf 
+查询一个字符是否存在，如果存在返还改字符串出现的下表，没有出现返回`-1` 
+```js
+console.log('abca'.indexOf('a')); // 输出0
+console.log('abca'.indexOf('a',1)); // 输出3
+console.log('abca'.indexOf('d')); // 输出-1
+```
+
+### lastIndexOf
+功能和indexOf类似，不过是从后往前找
+
+### `substr` 和 `substring`
+他们的区别主要如下
+
+```js
+substr(startindex[包含], length)
+substring(startindex[包含], endindex)
+```
+
+```js
+
+// 以下两组结果相同,是因为substring 在调用时,如果第一个参数大于第二个参数,会智能的调换位置
+console.log('abca'.substring(1,2)); // b
+console.log('abca'.substring(2,1)); // b
+```
+
+### `toString()` 和 `valueOf()`
+
+toString 必定返还的是一个字符串
+
+`valueOf` 返还的是一个原本的值
+
