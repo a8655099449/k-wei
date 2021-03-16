@@ -148,7 +148,7 @@ let str = /\w+/ //代表必须要有一个数字，或者多个数字
 
 ## 正则匹配的规则
 
-1. 不回头
+### 不回头
 
 匹配过的字符不会再重新匹配，比如以下这个例子
 
@@ -160,9 +160,20 @@ str.match(reg);
 // 在这个案例中，ac 和  ce 都符合正则匹配的要求
 // 但是在这里只会匹配出 ac
 ```
-2. 贪婪
+### 贪婪模式
 
 能匹配多就不匹配少
+ 
+### 非贪婪模式 <br>
+在正则中默认就是贪婪模式，如果像变成非贪婪模式，需要再原本的表达式后面加上`?`
+
+```js
+'hello world'.match(/.*/g)  // 在贪婪模式下 .* 会匹配所有的字符
+'hello world'.match(/.*?/g)  // 加上问号后就变成非贪婪模式，只匹配少不匹配多
+```
+
+
+
 
 
 ## js字符串内置方法
@@ -205,3 +216,108 @@ toString 必定返还的是一个字符串
 
 `valueOf` 返还的是一个原本的值
 
+## `replace()`  字符串替换
+> replace 绝对是字符串中重量级的函数，也是和正则合作的最好的函数。接下来我会在着重的介绍这个函数。
+
+`replace`的第一个参数可以使用字符串，也可以使用一个正则对象，
+
+第二个参数则是替换的内容
+
+
+replace 默认没有全局匹配。只有在正则加上g的关键字后才可以有全局属性
+```js
+`testtest`.replace('t','a') // 将字符串第一个遇到的 t 更换为a
+```
+像以上的例子如果我们要把所有的t替换为a 用字符串就无法满足需求
+
+我们可以这样写来完成需求
+
+```js
+`testtest`.replace(/t/g,'a') // 将字符串第一个遇到的 t 更换为a
+```
+
+### 练习1:  把中划线命名发改为驼峰命名
+例如: `user-name-and-user-age  => userNameAndUserAge`
+```js
+let str = 'user-name-and-user-age'
+let reg = /-(\w{)/g
+
+str.replace(reg,($,$1)=>{
+  console.log($,$1);
+  return $1.toUpperCase()
+})
+```
+
+### 练习2:  把`xxyy`改成`yyxxx`
+运用到了反向引用和replace的函数特性
+例如 `aabbccdd` => `bbaaddcc`
+```js
+let str = "aabbccdd";
+let reg = /(\w)\1(\w)\2/g;
+
+let res = str.replace(reg, ($, $1, $2) => {
+  return $2 + $2 + $1 + $1;
+});
+console.log("最终结果", res);
+```
+
+### 练习3 : 将驼峰命名换成下划线命名
+
+例如 `userNameAndUserAge => user_name_and_user_age`
+
+```js
+let str = "userNameAndUserAge";
+let reg = /[A-Z]/g;
+let res = str.replace(reg, ($) => {
+  return `_`+$.toLowerCase();
+});
+console.log("最终结果", res);
+```
+
+### 练习4 : 将`xxyyzz` 替换为 `XxYyZz`
+```js
+let str = "xxyyzzeeffgg";
+let reg = /(\w)\1/g;
+
+let res = str.replace(reg, ($,$1) => {
+  return `${$1.toUpperCase()}${$1}`
+});
+console.log("最终结果", res);
+```
+### 练习5 ：将`xxyyzz` 替换成 `x$y$z$` 且不能使用函数
+
+```js
+let str = "xxyyzz";
+let reg = /(\w)\1/g;
+let res = str.replace(reg, `$$$1`);
+console.log("最终结果", res);
+```
+这里的知识点是，如果我们要使用的`$`符号，需要在`$`前面再加一个`$` 也就是`$$` 
+
+
+### 练习6 : 字母去重  `aabbbcccsssssdddddd`  => `abcsd`
+```js
+let str = "aabbbcccsssssdddddd";
+let reg = /(\w)\1*/g;
+let res = str.replace(reg, `$1`);
+console.log("最终结果", res);
+```
+
+### 练习7 ： 将数字从右到左，每三位加一个逗号 `99999999`=> `99,999,999`
+
+
+这题其实就有点难度了,一开始我们可能想到的是这样
+
+```js
+let str = "99999999";
+let reg = /(\d{3}\B)/g;  // 加/B是为了防止编辑出现加逗号的情况
+let res = str.replace(reg, `$1,`);
+console.log("最终结果", res); // 999,999,99
+```
+
+```js
+let str = "99999999";
+let reg = /(?=(\B)(\d{3})+$)/g;
+let res = str.replace(reg, `,`);
+console.log("最终结果", res);
+```

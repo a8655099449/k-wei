@@ -5,7 +5,7 @@ tags:
  - 前端
  - http
 categories: code
-pic: 
+pic: //image.woai996.com/picGo/20210316213753.png
 desc: 关于浏览器缓存的一些记载
 ---
 
