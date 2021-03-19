@@ -144,6 +144,9 @@ transition: visibility 0.3s;
 
 ## 通用集合 
 
+### normal.css
+> `normal.css` 是网上一个通用解决各种浏览器怪癖的库
+
 :::details 查看代码
 ```css
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -490,6 +493,15 @@ template {
   display: none;
 }
 
+
+```
+:::
+
+### 页面中默认样式普通的共用类
+> 这里面我会定义一些开发中常用的类
+
+:::details 展开查看
+```css
 ul,
 li {
   list-style: none;
@@ -509,17 +521,22 @@ button {
 button {
   border: none;
 }
+/* 鼠标悬停出现下划线 */
 .underline {
   cursor: pointer;
 }
 .underline:hover {
   text-decoration: underline;
 }
+
+/* 图片的宽度跟随父元素 */
 .auto-img {
   width: 100%;
   height: 100%;
   display: block;
 }
+
+/* 文字超出显示 ... */
 .text-row-1 {
   overflow: hidden;
   white-space: nowrap;
@@ -537,7 +554,7 @@ button {
   -webkit-line-clamp: 3; /*这个决定行数*/
   overflow: hidden;
 }
-.text-row-42 {
+.text-row-4 {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4; /*这个决定行数*/
@@ -565,4 +582,116 @@ div {
   }
 }
 ```
+
 :::
+
+### 通用按钮样式
+> 按钮我全部采用了`flex`布局 默认有 `40`的高度和`80`高度 <br>
+:::details 展开查看
+```css
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 4px;
+  width: 80px;
+  height: 40px;
+  line-height: 40px;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+
+/*  !主按钮1 */
+
+.btn-main {
+  border: 1px solid var(--main-color);
+  background: var(--main-color);
+  color: #fff;
+}
+.plain.btn-main {
+  border: 1px solid var(--main-color);
+  background: transparent;
+  color: var(--main-color);
+}
+/* !主按钮2 */
+.btn-main-2 {
+  border: 1px solid var(--main-color-2);
+  background: var(--main-color-2);
+  color: #fff;
+}
+.plain.btn-main-2 {
+  border: 1px solid var(--main-color-2);
+  background: transparent;
+  color: var(--main-color-2);
+}
+/* ! 红色按钮 */
+.btn-red {
+  background-color: var(--red-color);
+  color: #ffffff;
+}
+
+.btn-red.plain {
+  border: 1px solid var(--red-color);
+  background: transparent;
+  color: var(--red-color);
+}
+
+/* ! 绿色按钮 */
+
+.btn-green {
+  background-color: var(--green-color);
+  color: #ffffff;
+}
+.btn-green.plain {
+  border: 1px solid var(--green-color);
+  background: transparent;
+  color: var(--green-color);
+}
+
+/* ! 灰色按钮 */
+
+.btn-gray {
+  background-color: var(--gray-color);
+  color: #ffffff;
+}
+
+.btn-gray.plain {
+  border: 1px solid var(--gray-color);
+  background: transparent;
+  color: var(--gray-color);
+}
+.btn-gray.gradient {
+  background: linear-gradient(180deg, #ffffff 0%, #d8d8d8 100%);
+  color: #aaaaaa;
+}
+
+/* ! 橙色按钮 */
+
+.btn-orange {
+  background-color: var(--orange-color);
+  color: #ffffff;
+}
+.btn-orange.plain {
+  border: 1px solid var(--orange-color);
+  background: transparent;
+  color: var(--orange-color);
+}
+
+/* ! 黄色按钮 */
+
+.btn-yellow.plain {
+  color: var(--yellow-color);
+  background: transparent;
+  border: 1px solid var(--yellow-color);
+}
+.btn-yellow {
+  color: #fff;
+  background: var(--yellow-color);
+}
+
+```
+:::
+
