@@ -20,7 +20,8 @@ categories: tool
 ### Live Server
 ::: tip
 live server 启动后会在当前的目录运行一个本地服务器，当你的页面更改时，会实时的对页面进行热更新
-- ![alt](https://raw.githubusercontent.com/ritwickdey/vscode-live-server/master/images/Screenshot/vscode-live-server-explorer-menu-demo-1.gif)
+
+![alt](//image.woai996.com/picGo/20210321164344.gif)
 :::
 
 ### open in browser
@@ -136,8 +137,9 @@ Prettier整合了许多语言的代码格式整理，属于必装插件
 ### Bracket Pair Colorizer
 
 ::: tip
-- **`Bracket Pair Colorizer`** 可以让你代码中的括号，非对组的颜色变得不同，让代码变得更有辨识度，某种意义上说也使得代码也变得更加美观优雅
-- ![Bracket Pair Colorizer](https://github.com/CoenraadS/Bracket-Pair-Colorizer-2/raw/develop/images/consecutiveExample.png)
+**`Bracket Pair Colorizer`** 可以让你代码中的括号，非对组的颜色变得不同，让代码变得更有辨识度，某种意义上说也使得代码也变得更加美观优雅
+
+![Bracket Pair Colorizer](//image.woai996.com/picGo/20210321164450.png)
 :::
 
 ### Path Intellisense
@@ -156,13 +158,25 @@ Prettier整合了许多语言的代码格式整理，属于必装插件
 - ![alt](https://raw.githubusercontent.com/OBKoro1/koro1FileHeader/master/images/example.gif)
 :::
 
+### Turbo Console Log
+:::tip
+日常写js中我们使用的最多的可能就是 `console.log` 这款插件可以让我们快速的生成一些注释，并且可以`一键注释` `一键删除` 对于开发帮助不小
 
+
+
+:::
+
+|   快捷键   |   功能   |
+| :----------: | ------------------------ |
+|   `选中要log的值，然后ctrl+alt+L`   |  生成console.log |
+|   `shift+alt+d`   |  删除当前文件所有console.log |
+|   `shift+alt+c`   |  注释当前文件所有console.log |
 
 ### Colorful Comments
 
 ::: tip
 **`Colorful Comments`** 可以更换你注释的高亮色，让代码可读性变高
--![alt](https://github.com/Parth2031/Colorful-Comments/raw/master/Images/Colorful-Comments.png)
+-![alt](//image.woai996.com/picGo/20210321164114.png)
 
 :::
 
@@ -174,7 +188,7 @@ Prettier整合了许多语言的代码格式整理，属于必装插件
 ::: tip
 这个插件也是我个人认为最值得安装的插件之一，一款编辑器好不好用，很大程度在于它好不好看，一款好看的编辑器，可以让我们写代码时变得更加舒心，这款插件会格局你文件的后缀和文件夹名称，改变文件图标的显示，增强目录的可读性和风格
 
--![vscode-icons](https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/images/screenshot.gif)
+-![vscode-icons](//image.woai996.com/picGo/20210321164243.gif)
 :::
 
 ### GitLens 

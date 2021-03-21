@@ -1,5 +1,5 @@
 ---
-title: 我常用css的常用属性
+title: 我常用css的常用属性（持续更新）
 date: 2020-11-18
 tags:
  - css
