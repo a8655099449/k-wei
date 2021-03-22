@@ -11,6 +11,7 @@ const p = new Promise((resolve, reject) =>{
 
 })
 
+
 console.log('-1-');
 p.then(res=>{
   console.log('异步执行');
