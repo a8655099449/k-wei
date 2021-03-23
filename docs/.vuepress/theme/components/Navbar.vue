@@ -118,7 +118,7 @@ $navbar-horizontal-padding = 1.5rem;
   top: 0;
   bottom: 0;
   z-index -1;
-  opacity: 1;
+  opacity: var(--nav-opacity);
 }
 .navbar {
   // --background-color: rgba(0, 0, 0, 0);

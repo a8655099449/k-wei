@@ -82,12 +82,12 @@ export default {
 
   props: ["sidebarItems"],
   mounted() {
-    setTimeout(() => {
-      this.pageTitleHeight = this.$refs.pageTitle.clientHeight;
-      this.pTbgBar = document.querySelector(".pt-bgBar");
-      this.pTbgBar.style.opacity = "0";
-      document.documentElement.scrollTop = 0;
-    }, 100);
+    // setTimeout(() => {
+    //   this.pageTitleHeight = this.$refs.pageTitle.clientHeight;
+    //   this.pTbgBar = document.querySelector(".pt-bgBar");
+    //   this.pTbgBar.style.opacity = "0";
+    //   document.documentElement.scrollTop = 0;
+    // }, 100);
 
     window.addEventListener("scroll", this.handleScrollChange);
   },
@@ -220,11 +220,14 @@ export default {
 
       this.ScrollTimer = setTimeout(() => {
         let prop = document.documentElement.scrollTop / this.pageTitleHeight;
-        if (prop < 1) {
-          this.pTbgBar.style.opacity = prop.toFixed(1);
-        } else {
-          this.pTbgBar.style.opacity = "1";
+
+        if (prop>1) {
+          prop = 1
         }
+        console.log(root);
+        let root = document.querySelector(":root");
+        root.style.setProperty('--nav-opacity',prop);
+       
       }, 100);
     },
   },
@@ -275,7 +278,7 @@ function flatten(items, res) {
   // padding-right 14rem
   display: block;
 
-  .side-bar {
+  /* .side-bar {
     position: fixed;
     top: 18rem;
     bottom: 10rem;
@@ -286,7 +289,7 @@ function flatten(items, res) {
       width: 0;
       height: 0;
     }
-  }
+  } */
 
   .page-title {
     max-width: $contentWidth;
