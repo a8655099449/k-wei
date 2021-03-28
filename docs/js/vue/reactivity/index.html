@@ -1,14 +1,10 @@
+<div id="player"></div>
+<script src="//player.polyv.net/script/player.js"></script>
 <script>
-
-  var _default = 0
-  Object.defineProperty(window,'a',{
-    get(){
-      return ++ _default
-    },
-  })
-
-  if(a == 1 && a == 2 && a == 3){
-    console.log('you win');
-  }
-  // 输出结果
+  var player = polyvPlayer({
+    wrap: '#player',
+    width: 800,
+    height: 533,
+    vid: '88083abbf5bcf1356e05d39666be527a_8' ,
+  });
 </script>
