@@ -108,14 +108,14 @@ export default {
     PersonalInfo,
     bgVideo,
     homeText,
-    HomeBgImg
+    HomeBgImg,
   },
   data() {
     return {
       recoShow: false,
       currentPage: 1,
       tags: [],
-      isBgVideo:true,//背面壁纸使用视频还是图片
+      isBgVideo: true, //背面壁纸使用视频还是图片
     };
   },
 
@@ -161,14 +161,15 @@ export default {
     this._setPage(this._getStoragePage());
     setTimeout(() => {
       this.pageTitleHeight = this.$refs.homeWarp.clientHeight;
-      this.pTbgBar = document.querySelector(".pt-bgBar");
-      this.pTbgBar.style.opacity = "0";
+      // this.pTbgBar = document.querySelector(".pt-bgBar");
+      // this.pTbgBar.style.opacity = "0";
       document.documentElement.scrollTop = 0;
+      this._root = document.querySelector(":root");
+
       window.addEventListener("scroll", this.handleScrollChange);
     }, 100);
     // 获得屏幕宽度
-     this.isBgVideo = document.documentElement.clientWidth > 800
-
+    this.isBgVideo = document.documentElement.clientWidth > 800;
   },
   methods: {
     // 获取当前页码
@@ -202,12 +203,10 @@ export default {
 
       this.ScrollTimer = setTimeout(() => {
         let prop = document.documentElement.scrollTop / this.pageTitleHeight;
-        if (prop < 1) {
-          this.pTbgBar.style.opacity = prop.toFixed(1);
-        }else{
-          this.pTbgBar.style.opacity = '1'
-
+        if (prop > 1 || isNaN(prop)) {
+          prop = 1;
         }
+        this._root.style.setProperty("--nav-opacity", prop);
       }, 100);
     },
   },
@@ -231,8 +230,7 @@ export default {
     opacity: 0.2;
     z-index: 10;
     animation: arrowsMov 3s infinite;
-
-   /*  &:hover {
+    /* &:hover {
       animation: none;
     } */
   }
@@ -406,7 +404,7 @@ export default {
       }
 
       .action-button {
-        font-size: 1rem; 
+        font-size: 1rem;
         padding: 0.6rem 1.2rem;
       }
     }

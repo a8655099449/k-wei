@@ -1,11 +1,15 @@
 <script>
-import { isActive } from "@theme/helpers/utils";
+import { isActive ,getshow } from "@theme/helpers/utils";
 
+// let _w = window
 export default {
   data() {
     return {
-      show: true
-    }
+      show: false,
+    };
+  },
+  mounted(){
+    this.show = getshow()
   },
   computed: {
     headers() {
@@ -19,17 +23,23 @@ export default {
     isLinkActive(header) {
       return isActive(this.$route, this.$page.path + "#" + header.slug);
     },
-    handleShow(){
-      this.show = !this.show
-    }
+    handleShow() {
+      this.show = !this.show;
+
+      if (this.show) {
+        localStorage.setItem("SHOW_SIDE_BAR", "1");
+      } else {
+        localStorage.setItem("SHOW_SIDE_BAR", "0");
+      }
+    },
   },
   render(h) {
-    console.log(this.$page.headers);
+    // console.log(this.$page.headers);
     return h(
       "ul",
       {
         class: { "sub-sidebar-wrapper": true },
-        style: { left:this.show ? "0px" : "-30vw" },
+        style: { left: this.show ? "0px" : "-30vw" },
       },
       [
         ...(this.$page.headers || []).map((header) => {
@@ -61,11 +71,11 @@ export default {
             // iconback: this.show,
             // iconcaidan:!this.show,
             iconfont: true,
-            show:!this.show,
+            show: !this.show,
           },
-          on:{
-            click:this.handleShow
-          }
+          on: {
+            click: this.handleShow,
+          },
         }),
       ]
     );
@@ -89,7 +99,8 @@ export default {
   padding: 0;
   border-right: 1px solid var(--border-color);
   padding-top: 40px;
-  transition 1s
+  transition: 1s;
+  opacity: var(--nav-opacity);
 
   .show-side-bar {
     width: 40px;
@@ -100,19 +111,19 @@ export default {
     // background: #fff;
     font-size: 20px;
     cursor: pointer;
-    display flex
-    align-items center
-    justify-content center
-    transition 1s
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
   }
-  .show-side-bar.show{
+
+  .show-side-bar.show {
     position: fixed;
     left: 40px;
     top: 100px;
     // border 1px solid #000
-    transform rotate(180deg)
-    font-size 40px
-
+    transform: rotate(180deg);
+    font-size: 40px;
   }
 
   li {

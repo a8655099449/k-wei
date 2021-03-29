@@ -287,3 +287,10 @@ function resolveItem (item, pages, base, groupDepth = 1) {
     }
   }
 }
+
+export function getshow(){
+
+  return localStorage.getItem("SHOW_SIDE_BAR") === "1" ? true : false
+
+
+}

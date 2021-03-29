@@ -82,12 +82,12 @@ export default {
 
   props: ["sidebarItems"],
   mounted() {
-    // setTimeout(() => {
-    //   this.pageTitleHeight = this.$refs.pageTitle.clientHeight;
-    //   this.pTbgBar = document.querySelector(".pt-bgBar");
-    //   this.pTbgBar.style.opacity = "0";
-    //   document.documentElement.scrollTop = 0;
-    // }, 100);
+    setTimeout(() => {
+      this.pageTitleHeight = this.$refs.pageTitle.clientHeight;
+      // this.pTbgBar = document.querySelector(".pt-bgBar");
+      // this.pTbgBar.style.opacity = "0";
+      document.documentElement.scrollTop = 0;
+    }, 100);
 
     window.addEventListener("scroll", this.handleScrollChange);
   },
@@ -220,21 +220,21 @@ export default {
 
       this.ScrollTimer = setTimeout(() => {
         let prop = document.documentElement.scrollTop / this.pageTitleHeight;
-
-        if (prop>1) {
-          prop = 1
+        // console.log(prop);
+        if (prop > 1 || isNaN(prop)) {
+          prop = 1;
         }
-        console.log(root);
+        // console.log(root);
         let root = document.querySelector(":root");
+        // console.log(root);
         root.style.setProperty('--nav-opacity',prop);
-       
       }, 100);
     },
   },
   destroyed() {
     // 删除滚动监听事件，再将navbar的透明值设置回1
     window.removeEventListener("scroll", this.handleScrollChange);
-    this.pTbgBar.style.opacity = "1";
+    // this.pTbgBar.style.opacity = "1";
   },
 };
 
@@ -279,18 +279,17 @@ function flatten(items, res) {
   display: block;
 
   /* .side-bar {
-    position: fixed;
-    top: 18rem;
-    bottom: 10rem;
-    right: 2rem;
-    overflow-y: scroll;
-
-    &::-webkit-scrollbar {
-      width: 0;
-      height: 0;
-    }
-  } */
-
+      position: fixed;
+      top: 18rem;
+      bottom: 10rem;
+      right: 2rem;
+      overflow-y: scroll;
+  
+      &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+      }
+    } */
   .page-title {
     max-width: $contentWidth;
     margin: 0 auto;
