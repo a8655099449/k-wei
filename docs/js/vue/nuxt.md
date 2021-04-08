@@ -105,8 +105,47 @@ export default ({ store, route, redirect, params, query, req, res }) => {
 ```
 
 
+## 数据交互
 
+首先需要安装 `@nuxtjs/axios 和 @nuxtjs/proxy` 这两个依赖
 
+```sh
+npm i @nuxtjs/axios  @nuxtjs/proxy --save
+```
 
+在 nuxt.config.js 进行配置
 
+```js
+export default {
+  modules: [
+    '@nuxtjs/axios'
+  ],
+}
+```
+
+### 同域请求
+
+通常用于mock请求，简历这样一个文件`static\data\user.json` ，用于数据模拟
+ 
+
+```json
+// static\data\user.json
+{
+  "user":{
+    "name":"张三",
+    "age":18
+  }
+}
+```
+
+通常都在`asyncData`这个钩子进行数据请求
+
+```js
+async asyncData({$axios}){
+  let res = await $axios({url:'/data/user.json'})
+  return {
+    user:res.data.user
+  }
+},
+```
 
