@@ -36,5 +36,8 @@ git remote set-url origin git-link
 ssh-keygen -o
 ```
 
+## 常用指令
 
-
+|   指令   |  作用   |
+| :----------: | ------------------------ |
+|   `git branch`   | 查看分支 |
