@@ -225,6 +225,8 @@ categories: tool
 
 ### 在代码片段中的变量
 
+[更多预变量文档地址](https://code.visualstudio.com/docs/editor/userdefinedsnippets#_variables)
+
 ```
 TM_SELECTED_TEXT 当前选定的文本或空字符串
 TM_CURRENT_LINE 当前行的内容

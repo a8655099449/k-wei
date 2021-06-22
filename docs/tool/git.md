@@ -38,7 +38,18 @@ ssh-keygen -o
 
 ## 常用指令
 
-|   指令   |  作用   |
-| :----------: | ------------------------ |
-|   `git branch`   | 查看分支 |
-|   `git checkout [分支名]`   | 分支名 |
+|          指令           | 作用     |
+| :---------------------: | -------- |
+|      `git branch`       | 查看分支 |
+| `git checkout [分支名]` | 分支名   |
+|  `git reset --hard [id]`  | 回退分支 |
+
+
+## 关于新电脑我们应该如何设置git
+
+使用下面的命令将你的账号设置为自己的
+```sh
+git config --global user.name 'your name'
+git config --global user.email 'xxxxx@qq.com'
+```
+

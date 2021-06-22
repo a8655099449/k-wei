@@ -31,7 +31,7 @@ yarn create umi  [项目名]
 
 antd也提供了默认的两种基础布局容器，路径分别是`src\layouts\BasicLayout.jsx` 和`src\layouts\UserLayout.jsx`，一个登录的容器，一个是后台主要展示的容器，登录没啥好说的，我们主要说说`BasicLayout`这个容器
 
-`antd-pro`的路由规则是约定式路由，我们需要在根目录下的`config\routes.js`来配置对应的目录，它使用了内置的一个强大的组件 [ProLayout](https://procomponents.ant.design/components/layout)，默认的情况下回自动的根据路由配置来渲染出左侧菜单
+`antd-pro`的路由规则是约定式路由，我们需要在根目录下的`config\routes.js`来配置对应的目录，它使用了内置的一个强大的组件 [ProLayout](https://procomponents.ant.design/components/layout)，默认的情况下回自动的根据路由配置来渲染出左侧菜单。
 
 
 
