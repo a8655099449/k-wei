@@ -4,6 +4,7 @@ date: 2020-12-14
 tags:
  - 工具
  - 经验
+ - git
 categories: code
 ---
 
@@ -36,13 +37,13 @@ git remote set-url origin git-link
 ssh-keygen -o
 ```
 
-## 常用指令
+<!-- ## 常用指令
 
 |          指令           | 作用     |
 | :---------------------: | -------- |
 |      `git branch`       | 查看分支 |
 | `git checkout [分支名]` | 分支名   |
-|  `git reset --hard [id]`  | 回退分支 |
+| `git reset --hard [id]` | 回退分支 | --> |
 
 
 ## 关于新电脑我们应该如何设置git
@@ -52,4 +53,39 @@ ssh-keygen -o
 git config --global user.name 'your name'
 git config --global user.email 'xxxxx@qq.com'
 ```
+
+## 合并
+
+使用 `git merge  [分支名] ` 来进行合并
+
+如果出现大量冲突需要取消合并 使用 `git merge --abort`
+
+
+## 分支
+
+- 查看分支 `git branch`
+- 创建分支 `git branch [分支名]`
+- 查看远程分支 `git branch -a`
+
+- 切换分支 `git checkout [分支名]`
+- 切换远程的某条分支
+```sh
+# 
+git checkout -b test origin/test
+git pull origin test  
+```
+
+
+## 版本回退
+
+1. 先查看提交记录 `git log`
+2. `git reset --hard [id]` 来切换到分支
+
+## 推送
+
+`git push 进行推送`
+
+
+
+
 
