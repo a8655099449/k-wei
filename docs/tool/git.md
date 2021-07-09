@@ -46,6 +46,13 @@ ssh-keygen -o
 | `git reset --hard [id]` | 回退分支 | --> |
 
 
+## 从服务器拉取指定分支
+
+```shell
+git clone -b develop [url] 
+```
+
+
 ## 关于新电脑我们应该如何设置git
 
 使用下面的命令将你的账号设置为自己的

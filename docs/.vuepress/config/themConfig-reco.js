@@ -54,8 +54,13 @@ const themeConfig = {
     {
       title: "live music",
       desc: "使用react写的一个仿网易云网站",
-      // email: "1156743527@qq.com",
       link: "//music.woai996.com",
+    },
+    {
+      title: "上天的🐖",
+      desc: "为啥要叫🐖",
+      // email: "1156743527@qq.com",
+      link: "//yan_chunli.gitee.io/blog/",
     },
   ],
 }
