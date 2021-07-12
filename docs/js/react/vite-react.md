@@ -89,5 +89,65 @@ export default function Test() {
 
 ## mock数据
 
-`mock` 也是我们开发常见的一种场景
+`mock` 也是我们开发中常用到的一种功能
 
+也有开发者提供了这个插件
+
+[中文文档](https://github.com/anncwb/vite-plugin-mock/blob/main/README.zh_CN.md)
+1. 安装
+
+```sh
+yarn add morkjs
+yarn add vite-plugin-mock -D
+```
+
+2. 更改`vite.config.js`中的配置
+
+```js
+import { defineConfig } from "vite";
+import reactRefresh from "@vitejs/plugin-react-refresh";
+
+import { viteMockServe } from "vite-plugin-mock";
+
+// https://vitejs.dev/config/
+export default defineConfig(({ command }) => ({
+  plugins: [
+    viteMockServe({
+      // default
+      mockPath: "mock",
+      localEnabled: command === "serve",
+    }),
+    reactRefresh(),
+  ]
+}));
+```
+
+3. 创建mork的数据 `mork/test.ts`
+
+```ts
+import { MockMethod } from "vite-plugin-mock";
+
+export default [
+  {
+    url: "/api/test",
+    method: "get",
+    response(query) {
+      return {
+        code: 1,
+        data: {
+          name: "张三",
+          age: 18,
+        },
+      };
+    },
+  },
+] as MockMethod[];
+```
+
+4. 使用
+
+```js
+axios.get("/api/test?a=1&b=2").then((res) => {
+  console.log(res);
+});
+```
