@@ -5,7 +5,7 @@ const themeConfig_default = require("./config/themConfig-default");
 module.exports = {
   ...themeConfig_reco,
   // base:'/static-blog/',
-  dest: "../k-wei-2",
+  // dest: "../k-wei-2",
   markdown: {
     lineNumbers: true,
   },
