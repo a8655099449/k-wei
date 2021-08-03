@@ -695,3 +695,28 @@ div {
 ```
 :::
 
+## 文字篇
+
+### 控制文字换行
+
+```css
+
+.text{
+  white-space: nowrap;   /* 不允许换行文字多长都会在一行显示 */
+  white-space: pre-line;   /* 会保留换行符，但是不会保留空白符 ，而且会自动换行 */
+  white-space: pre-wrap;   /* 会保留空白符和换行符，会自动换行 */
+  white-space: pre;   /* 会保留空白符和换行符 不会自动换行，和一个pre标签类似 */
+}
+```
+但英语单词过长不会自动换行时（比如下图这个情况），我们可以使用这个属性这个强制换行
+![alt](//image.woai996.com/picGo/20210612201825.png)
+```css
+.text{
+  word-break: break-all;
+}
+```
+### 文字竖向显示
+
+1. 第一种方法是设置文字容器宽度为一个字的宽，利用自动换行的特点就可以实现竖向显示
+2. `writing-mode:vertical-lr;` 设置这个属性可以更加轻松的达到效果
+3. 设置上面的属性时中文字体会正常显示，而英文字体会旋转90°，我们可以使用这个属性来使英文字体不旋转`text-orientation: upright;`，或者使用` text-orientation: sideways;`使中文也换行
