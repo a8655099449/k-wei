@@ -97,3 +97,9 @@ Geek是一款非常小巧的卸载软件工具，如果你还在用什么360软�
 
 [calibre下载地址](https://calibre-ebook.com/download_windows)
 :::
+
+## windows分屏软件（powerToys）
+
+:::tip
+windows虽然可以使用win+方向键来使用默认的分屏功能，但使用起来还是不很顺手。  `powerToys` 是微软官方推出的一款开源工具类软件，因为是官方推出，使用起来十分丝滑，不含任何广告，性能也极佳。可以大幅度提升win10系统分屏体验。 [下载地址](https://github.com/microsoft/PowerToys/releases/)
+:::
