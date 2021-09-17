@@ -86,5 +86,5 @@ yarn i18n-remove
 
 也支持从服务器请求类配置，只要满足它提供的接口需求可以
 
-
+在[这篇文档](https://pro.ant.design/zh-CN/docs/advanced-menu)内，讲解了菜单的高级用途，几乎可以满足日常开发的绝大多数场景了。
 
