@@ -8,7 +8,7 @@
 <template>
   <div class="abstract-item" @click="$router.push(item.path)">
     <div class="img-box">
-      <img :src="imgPic" />
+      <img :src="imgPic" @error="handleError()" />
     </div>
     <!-- <i v-if="item.frontmatter.sticky" class="iconfont reco-sticky"></i> -->
     <div class="content">
@@ -46,6 +46,17 @@ export default {
       this.imgPic = miniPicArr[parseInt(Math.random() * miniPicArr.length)];
     }
   },
+
+  methods: {
+    handleError() {
+      console.log(
+        "👴2021-10-06 20:28:59 NoteAbstractItem.vue line:52",
+        "图片加载错误"
+      );
+      this.imgPic = miniPicArr[parseInt(Math.random() * miniPicArr.length)];
+      console.log('👴2021-10-06 20:32:56 NoteAbstractItem.vue line:58',this.imgPic)
+    },
+  },
 };
 </script>
 
@@ -66,22 +77,23 @@ export default {
   cursor: pointer;
   display: flex;
   // align-items stretch
-  align-self stretch
-  max-height 600px
+  align-self: stretch;
+  max-height: 600px;
+
   .img-box {
     width: 30%;
     margin-right: 20px;
     max-height: 600px;
     overflow: hidden;
-    display flex
-    align-items center
+    display: flex;
+    align-items: center;
 
     img {
       width: 100%;
-      height 140px
+      height: 140px;
       border-radius: 4px;
       object-fit: cover;
-      border-radius 3px
+      border-radius: 3px;
     }
   }
 
