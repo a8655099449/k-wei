@@ -195,7 +195,6 @@ export const miniPicArr = [
   "https://pic4.zhimg.com/80/v2-8d6aaa767ec5f0dad922bb3cf11b3847_720w.jpg",
   "https://pic2.zhimg.com/80/v2-bfa7d00137e7676e6de96fa3dc7e9375_720w.jpg",
   "https://pic4.zhimg.com/80/v2-c7f988b25302d21f0575fdaade00f1e7_720w.jpg",
-  "https://pic2.zhimg.com/80/v2-2919983c841f7d3ef8b4c0f114c3fda9_720w.jpg",
   "https://pic4.zhimg.com/80/v2-541f23fcede7a014913a12167cc85b23_720w.jpg",
   "https://pic3.zhimg.com/80/v2-596755683bf85cb049211fa5a315f2ca_720w.jpg",
   "https://pic2.zhimg.com/80/v2-c47d98d2d2a06d784392984e9c228b49_720w.jpg",

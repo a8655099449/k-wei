@@ -191,7 +191,6 @@ export const formatTime = (date, fmt) => {
   }
   return fmt;
 };
-
       
 // 使用示例
 console.log(formatTime(Date.now(), 'yyyy-MM-dd hh:mm:ss'))
