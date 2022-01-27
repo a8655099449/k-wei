@@ -1,5 +1,5 @@
 ---
-title:  不要重复的造轮子，判断react中好用的库
+title:  不要重复的造轮子，盘点react中好用的库
 date: 2022-01-21
 tags:
  - 前端
@@ -32,6 +32,52 @@ desc:
 
 
 
+
+## 脚手架
+vue的脚手架千篇一律，而react的脚手架却是百花齐放
+
+
+### [create-react-app](https://create-react-app.bootcss.com/docs/getting-started)
+
+优点 ： 官方推荐，老牌强者、扩展强
+
+缺点 : 中文文档拉胯 、 内置功能较少
+
+
+
+### [umijs](https://umijs.org/zh-CN)
+
+:::tip
+umijs 最适合学过vue又开始使用react的开发者，这也是我自己用的最多且用的最爽的框架
+:::
+
+优点： 中文文档 、 内置功能多 、 配置更简单 、 支持服务端渲染
+
+缺点: 有些内置显得臃肿 ， 扩展性没有其他框架好
+
+
+### [vitejs](https://vitejs.cn/)
+
+:::tip
+作为新一代的vue脚手架野心，并不仅仅支持vue的使用，而支持前端的大多数框架，当然也支持react
+:::
+
+优点 ： 热启动和热更新快 、 使用了最新的浏览器特性 、 扩展强 、速度快
+
+缺点 ： 新技术可能存在的坑多 、 很多功能本身不内置需要自己实现或者使用插件实现
+
+
+### [next](https://www.nextjs.cn/)
+
+优点 ： 拥有着很不错的静态文件生成和ssr渲染能力 
+
+缺点 :  需要有一定的学习成本，中文文档不够完善且
+
+
+### [taro](http://taro-docs.jd.com/taro/docs/README/index.html)
+
+taro 属于一个特殊的脚手架，它可以将你的react项目编译成小程序或者h5。但必须要遵照它一些特殊的语法。如果要开发h5或者小程序可以尝试使用。如果是开发web网站或者后台则不建议使用。
+
 ## WEB端 UI框架库
 
 
@@ -45,10 +91,10 @@ desc:
 
 ### 3. [arco.design](https://arco.design/)
 
-> 最近由字节跳动开源的`arco.design`一口气推出了`vue`和`react`版本 <br>
-> 尽管他的风格和api都和`antd`十分相似，但`arco`更年轻一些，不妨一试。
+最近由字节跳动开源的`arco.design`一口气推出了`vue`和`react`版本 <br />
+尽管他的风格和api都和`antd`十分相似，但`arco`更年轻一些，不妨一试。
 
-> 虽然`arco`可能借鉴于`antd`，但凭借着字节开发团队的势力，谁能走得更远犹未可知。 
+虽然`arco`可能借鉴于`antd`，但凭借着字节开发团队的势力，谁能走得更远犹未可知。 
 
 
 
@@ -65,15 +111,20 @@ desc:
 
 ## 其他
 
-### [ahooks](https://ahooks.js.org/)
+### [ahooks](https://ahooks.js.org/) 自定义hooks库
 ahooks有着非常多精巧的钩子和TS提示 ，其中的`useRequest`是我开发中经常使用到的，非常好用
 
 
-### [react-dnd](https://react-dnd.github.io/react-dnd/about)
+### [react-dnd](https://react-dnd.github.io/react-dnd/about)拖拽组件
 react-dnd是一个支持dom拖拽的库
 
-### [React Slick](https://react-slick.neostack.com/)
+### [React Slick](https://react-slick.neostack.com/)轮播图组件
 Slick 是一个轮播图的组件库
 
-### [react-hot-toast](https://github.com/timolins/react-hot-toast)
+### [react-hot-toast](https://github.com/timolins/react-hot-toast) 提示组件
 `react-hot-toast`是一款小巧的提示框组件
+
+### [pagic](https://pagic.org/) 博客框架
+
+
+

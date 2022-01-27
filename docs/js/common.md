@@ -195,3 +195,120 @@ export const formatTime = (date, fmt) => {
 // 使用示例
 console.log(formatTime(Date.now(), 'yyyy-MM-dd hh:mm:ss'))
 ```
+
+
+## 图片进行压缩
+
+```ts
+type CompressImg = {
+  afterKB?: number;
+  beforeKB?: number;
+  afterSrc?: string;
+  beforeSrc?: string;
+  file?: File;
+  origin?: File;
+};
+
+
+//  传入文件对象 和 压缩比例 其中 0.2 为最佳压缩比例
+function compressImg(file: File, quality: number): Promise<CompressImg> {
+  let qualitys = quality || 0.2;
+  if (Array.isArray(file)) {
+    // @ts-ignore
+    return Promise.all(
+      // @ts-ignore
+      Array.from(file).map((e) => compressImg(e, qualitys))
+    ); // 如果是 file 数组返回 Promise 数组
+  }
+
+
+  return new Promise((resolve) => {
+    const reader = new FileReader(); // 创建 FileReader
+    reader.onload = ({ target: { result: src } }) => {
+      const image = new Image(); // 创建 img 元素
+      image.onload = async () => {
+        const canvas = document.createElement("canvas"); // 创建 canvas 元素
+        const context = canvas.getContext("2d");
+        var targetWidth = image.width;
+        var targetHeight = image.height;
+        var originWidth = image.width;
+        var originHeight = image.height;
+
+        const sizeKb = parseInt((file.size / 1024).toFixed(2));
+        //  1m ~ 10m
+        if (1 * 1024 <= sizeKb && sizeKb <= 10 * 1024) {
+          var maxWidth = 1600;
+          var maxHeight = 1600;
+          targetWidth = originWidth;
+          targetHeight = originHeight;
+          // 图片尺寸超过的限制
+          if (originWidth > maxWidth || originHeight > maxHeight) {
+            if (originWidth / originHeight > maxWidth / maxHeight) {
+              // 更宽，按照宽度限定尺寸
+              targetWidth = maxWidth;
+              targetHeight = Math.round(
+                maxWidth * (originHeight / originWidth)
+              );
+            } else {
+              targetHeight = maxHeight;
+              targetWidth = Math.round(
+                maxHeight * (originWidth / originHeight)
+              );
+            }
+          }
+        }
+        // >10m
+        if (10 * 1024 <= sizeKb && sizeKb <= 20 * 1024) {
+          maxWidth = 1400;
+          maxHeight = 1400;
+          targetWidth = originWidth;
+          targetHeight = originHeight;
+          // 图片尺寸超过的限制
+          if (originWidth > maxWidth || originHeight > maxHeight) {
+            if (originWidth / originHeight > maxWidth / maxHeight) {
+              // 更宽，按照宽度限定尺寸
+              targetWidth = maxWidth;
+              targetHeight = Math.round(
+                maxWidth * (originHeight / originWidth)
+              );
+            } else {
+              targetHeight = maxHeight;
+              targetWidth = Math.round(
+                maxHeight * (originWidth / originHeight)
+              );
+            }
+          }
+        }
+
+        canvas.width = targetWidth;
+        canvas.height = targetHeight;
+        context.clearRect(0, 0, targetWidth, targetHeight);
+        context.drawImage(image, 0, 0, targetWidth, targetHeight); // 绘制 canvas
+        const canvasURL = canvas.toDataURL(`image/jpeg`, qualitys);
+        const buffer = atob(canvasURL.split(",")[1]);
+        let length = buffer.length;
+        const bufferArray = new Uint8Array(new ArrayBuffer(length));
+        while (length--) {
+          bufferArray[length] = buffer.charCodeAt(length);
+        }
+        const miniFile = new File([bufferArray], file.name, {
+          type: `image/jpeg`,
+        });
+
+        resolve({
+          file: miniFile,
+          origin: file,
+          // @ts-ignore
+          beforeSrc: src,
+          afterSrc: canvasURL,
+          beforeKB: Number((file.size / 1024).toFixed(2)),
+          afterKB: Number((miniFile.size / 1024).toFixed(2)),
+        });
+      };
+      // @ts-ignore
+      image.src = src;
+    };
+    reader.readAsDataURL(file);
+  });
+}
+```
