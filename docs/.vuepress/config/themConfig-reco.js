@@ -23,10 +23,9 @@ const themeConfig = {
   startYear: '2020',
   author: 'kuangw',
   subSidebar: 'auto',
-  repo: "https://gitee.com/kuangweiwudi/my-node",
+  repo: "https://github.com/a8655099449/k-wei",
   authorAvatar: 'http://image.woai996.com/picgo/20201127101131.png',
   repoLabel: 'GitHub',
-
   editLinks: true,
   // valine评论的配置
   valineConfig: {

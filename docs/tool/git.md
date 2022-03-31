@@ -37,14 +37,6 @@ git remote set-url origin git-link
 ssh-keygen -o
 ```
 
-<!-- ## 常用指令
-
-|          指令           | 作用     |
-| :---------------------: | -------- |
-|      `git branch`       | 查看分支 |
-| `git checkout [分支名]` | 分支名   |
-| `git reset --hard [id]` | 回退分支 | --> |
-
 
 ## 从服务器拉取指定分支
 
@@ -83,14 +75,49 @@ git pull origin test
 ```
 
 
-## 版本回退
-
-1. 先查看提交记录 `git log`
-2. `git reset --hard [id]` 来切换到分支
 
 ## 推送
 
 `git push 进行推送`
+
+
+
+## 暂存工作区的内容
+
+假设场景
+
+我们正在`dev`开发，突然产品来说`release`分支出现了问题，需要修复紧急上限，可是目前手上的开发才进行到一半啊 
+
+这是可以使用`git  stash` 命令暂存工作区中尚未存储的部分，然后回到`目标分支`修改问题。
+
+
+之后在使用 `git stash apply` 就能释放之前那些正在开发的内容了。
+
+
+```sh
+# 保存当前未commit的代码
+git stash
+
+# 保存当前未commit的代码并添加备注
+git stash save "备注的内容"
+
+# 列出stash的所有记录
+git stash list
+
+# 删除stash的所有记录
+git stash clear
+
+# 应用最近一次的stash
+git stash apply
+
+# 应用最近一次的stash，随后删除该记录
+git stash pop
+
+# 删除最近的一次stash
+git stash drop
+```
+
+## 回退或者修改commit
 
 
 
